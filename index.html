@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Éclipse Online</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-black text-white font-sans">
+  <header class="bg-gradient-to-b from-gray-900 to-black p-6 text-center">
+    <h1 class="text-5xl font-bold tracking-wide mb-2">Éclipse Online</h1>
+    <p class="text-xl text-gray-400">Un monde infini. Une immersion totale. Votre aventure commence ici.</p>
+    <div class="mt-6">
+      <a href="#" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-xl transition">
+        Télécharger la version Alpha
+      </a>
+    </div>
+  </header>
+  <section class="relative h-[70vh] flex items-center justify-center bg-cover bg-center" style="background-image: url('img/image-eclipse.jpg');">
+    <div class="bg-black bg-opacity-60 p-8 rounded-xl text-center">
+      <h2 class="text-4xl font-bold mb-4">Plongez dans l'univers le plus évolutif jamais créé</h2>
+      <p class="text-lg text-gray-300">Inspiré de vos mondes préférés – fantasy, science-fiction, surnaturel – Éclipse Online est vivant, connecté à la réalité, et sans fin.</p>
+    </div>
+  </section>
+  <section class="py-16 px-6 bg-gray-900">
+    <h3 class="text-3xl font-bold text-center mb-10">Fonctionnalités clés</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+      <div>
+        <h4 class="text-xl font-semibold mb-2">🌍 Monde infini</h4>
+        <p class="text-gray-400">Aucune limite de territoire, des univers entiers à explorer.</p>
+      </div>
+      <div>
+        <h4 class="text-xl font-semibold mb-2">🧠 IA Adaptative</h4>
+        <p class="text-gray-400">Des PNJ dynamiques, une narration qui répond à vos choix.</p>
+      </div>
+      <div>
+        <h4 class="text-xl font-semibold mb-2">🎮 Jouable partout</h4>
+        <p class="text-gray-400">PC, Mac, Mobile, Consoles. Version Lite ou Haute performance.</p>
+      </div>
+    </div>
+  </section>
+  <section class="py-16 bg-black text-center">
+    <h3 class="text-3xl font-bold mb-6">🚀 Alpha disponible dans :</h3>
+    <div id="countdown" class="text-4xl font-mono text-indigo-500"></div>
+  </section>
+  <section class="py-16 bg-gray-800 px-6">
+    <h3 class="text-3xl font-bold text-center mb-10">Hall des Héros</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-center">
+      <div class="bg-gray-900 p-6 rounded-xl shadow-lg">
+        <p class="text-gray-300 italic">"Éclipse est plus qu’un jeu. C’est un voyage."</p>
+        <p class="mt-4 font-bold">– Testeur Alpha #001</p>
+      </div>
+      <div class="bg-gray-900 p-6 rounded-xl shadow-lg">
+        <p class="text-gray-300 italic">"Chaque session est unique. Je n’ai jamais vu ça."</p>
+        <p class="mt-4 font-bold">– MJ Test Mordrex</p>
+      </div>
+    </div>
+  </section>
+  <footer class="bg-gray-900 text-center text-gray-500 p-6">
+    <p>&copy; 2025 Éclipse Online. Tous droits réservés.</p>
+    <div class="mt-2 flex justify-center gap-4">
+      <a href="#" class="hover:text-white">Facebook</a>
+      <a href="#" class="hover:text-white">Discord</a>
+      <a href="#" class="hover:text-white">Mentions légales</a>
+    </div>
+  </footer>
+  <script>
+    const countdown = () => {
+      const end = new Date("2025-07-01T00:00:00").getTime();
+      const now = new Date().getTime();
+      const diff = end - now;
+      if (diff <= 0) {
+        document.getElementById("countdown").innerText = "L'Alpha est lancée !";
+        return;
+      }
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+      document.getElementById("countdown").innerText = `${days}j ${hours}h ${minutes}m ${seconds}s`;
+      setTimeout(countdown, 1000);
+    };
+    countdown();
+  </script>
+</body>
+</html>
