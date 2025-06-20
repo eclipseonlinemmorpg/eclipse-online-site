@@ -10,6 +10,8 @@
       background: url('https://scontent-lga3-2.xx.fbcdn.net/v/t39.30808-6/508394426_122107395428902591_7595419777272986316_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=vppuUEQR2TIQ7kNvwEXKr0U&_nc_oc=AdlmCi1x2oCRIscwxG7lQT2B2_ZRQz-QJf--I7yrtgnkhVqDNjCVrPWeOeBpMPeNvoQ&_nc_zt=23&_nc_ht=scontent-lga3-2.xx&_nc_gid=tZ6qb9rr0hDTWTlbX6xOWg&oh=00_AfNzuU6XnA9DmVLpW4jVtC2OmM9mt9V9McGpbqW0IUDS1w&oe=685A9AC5') center center / cover no-repeat fixed;
       background-size: cover;
       font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
     }
 
     .bg-overlay {
@@ -97,11 +99,11 @@
     </footer>
   </div>
 
-  <!-- SECTION BLACKCORE SENTINEL -->
-  <section id="blackcore-section" class="max-w-4xl mx-auto px-4 py-12 text-white fade-in">
-    <h2 class="text-3xl font-bold mb-6 text-red-500">🔒 Pourquoi choisir BLACKCORE SENTINEL™ ?</h2>
+  <!-- SECTION RHYDRAKON DEFENSE -->
+  <section id="rhydrakon-section" class="max-w-4xl mx-auto px-4 py-12 text-white fade-in">
+    <h2 class="text-3xl font-bold mb-6 text-red-500">🔒 Pourquoi choisir RHYDRAKON DEFENSE™ ?</h2>
     <p class="mb-6 text-gray-200 text-lg leading-relaxed">
-      Conçu pour les infrastructures critiques, <span class="text-red-400 font-semibold">BLACKCORE SENTINEL™</span> dépasse les antivirus classiques.
+      Conçu pour les infrastructures critiques, <span class="text-red-400 font-semibold">RHYDRAKON DEFENSE™</span> dépasse les antivirus classiques.
       Il protège vos <span class="text-red-300">PC, serveurs, IA MJ, consoles, mobiles</span> et systèmes <span class="text-red-300">VR</span> avec un système IA intelligent.
     </p>
 
@@ -117,7 +119,7 @@
     <!-- 🧠 Bouton IA + effet -->
     <div class="mt-8">
       <button onclick="activateIA()" class="bg-red-600 hover:bg-red-800 text-white font-bold py-2 px-6 rounded-full shadow-lg transition-all duration-300">
-        🧠 Activer BLACKCORE IA
+        🧠 Activer RHYDRAKON IA
       </button>
     </div>
 
@@ -145,7 +147,7 @@
   <!-- 🔧 SCRIPTS JS -->
   <script>
     function activateIA() {
-      const section = document.getElementById('blackcore-section');
+      const section = document.getElementById('rhydrakon-section');
       const status = document.getElementById('rhydrakon-status');
       const seyra = document.getElementById('seyra-notification');
 
@@ -170,6 +172,195 @@
       }, 9000);
 
       // synthèse vocale
+      if (window.speechSynthesis.speaking) {
+        window.speechSynthesis.cancel();
+      }
+      const speech = new SpeechSynthesisUtterance("Système SEYRA activé. Surveillance intelligente en cours.");
+      speech.lang = "fr-FR";
+      speech.volume = 1;
+      speech.rate = 0.95;
+      speech.pitch = 1.2;
+      window.speechSynthesis.speak(speech);
+    }
+  </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ÉCLIPSE ONLINE™</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: url('https://scontent-lga3-2.xx.fbcdn.net/v/t39.30808-6/508394426_122107395428902591_7595419777272986316_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=vppuUEQR2TIQ7kNvwEXKr0U&_nc_oc=AdlmCi1x2oCRIscwxG7lQT2B2_ZRQz-QJf--I7yrtgnkhVqDNjCVrPWeOeBpMPeNvoQ&_nc_zt=23&_nc_ht=scontent-lga3-2.xx&_nc_gid=tZ6qb9rr0hDTWTlbX6xOWg&oh=00_AfNzuU6XnA9DmVLpW4jVtC2OmM9mt9V9McGpbqW0IUDS1w&oe=685A9AC5') center center / cover no-repeat fixed;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .bg-overlay {
+      background-color: rgba(0, 0, 0, 0.7);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .button {
+      margin: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #00cfff;
+      border-radius: 9999px;
+      color: black;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .button:hover {
+      background-color: #008baf;
+      color: white;
+    }
+
+    @keyframes fadeInSmooth {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-in {
+      animation: fadeInSmooth 1.2s ease-out both;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.6); }
+      70% { box-shadow: 0 0 0 12px rgba(255, 0, 0, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(255, 0, 0, 0); }
+    }
+    .pulse-ring {
+      animation: pulse 2s infinite;
+    }
+
+    .ia-activation-effect {
+      border: 2px solid #ff5555;
+      box-shadow: 0 0 20px 5px #ff0000;
+      animation: iaFlash 1.5s ease-out forwards;
+    }
+
+    @keyframes iaFlash {
+      0% { opacity: 0.3; transform: scale(0.9); }
+      50% { opacity: 1; transform: scale(1.05); }
+      100% { opacity: 1; transform: scale(1); box-shadow: 0 0 30px 10px #ff2222; }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-overlay">
+    <h1 class="text-4xl font-bold text-blue-300">Bienvenue sur ÉCLIPSE ONLINE™</h1>
+    <p class="mt-4 text-white max-w-xl">
+      Un monde connecté en temps réel, dirigé par VALKRAIN™ et l’IA SEYRA™. Disponible sur toutes les plateformes.
+    </p>
+
+    <div class="mt-6">
+      <a href="#" class="button">🖥️ Télécharger PC</a>
+      <a href="#" class="button">🍏 Télécharger Mac</a>
+      <a href="#" class="button">📱 Android</a>
+      <a href="#" class="button">📲 iOS</a>
+      <a href="#" class="button">🎮 Console</a>
+      <a href="#" class="button">🕶️ VR</a>
+    </div>
+
+    <div class="mt-6">
+      <a href="https://www.facebook.com/profile.php?id=61577077756912&locale=fr_CA" target="_blank" class="text-blue-400 underline hover:text-white">
+        🌐 Page Facebook Officielle
+      </a>
+    </div>
+
+    <footer class="mt-10 text-sm text-white">
+      © 2025 ÉCLIPSE ONLINE™ — Certificat #00095301-1 — Tous droits réservés.
+    </footer>
+  </div>
+
+  <!-- SECTION RHYDRAKON DEFENSE -->
+  <section id="rhydrakon-section" class="max-w-4xl mx-auto px-4 py-12 text-white fade-in">
+    <h2 class="text-3xl font-bold mb-6 text-red-500">🔒 Pourquoi choisir RHYDRAKON DEFENSE™ ?</h2>
+    <p class="mb-6 text-gray-200 text-lg leading-relaxed">
+      Conçu pour les infrastructures critiques, <span class="text-red-400 font-semibold">RHYDRAKON DEFENSE™</span> dépasse les antivirus classiques.
+      Il protège vos <span class="text-red-300">PC, serveurs, IA MJ, consoles, mobiles</span> et systèmes <span class="text-red-300">VR</span> avec un système IA intelligent.
+    </p>
+
+    <ul class="list-disc ml-6 space-y-2 text-red-300 text-base">
+      <li>🧠 IA évolutive et auto-apprenante</li>
+      <li>🛡️ Détection comportementale en temps réel</li>
+      <li>🌐 Protection DDoS proactive multi-niveaux</li>
+      <li>📊 Supervision via SEYRA™ IA Center</li>
+      <li>🔐 Chiffrement complet + pare-feu IA dynamique</li>
+      <li>🧬 Compatible : PC, console, VR, mobile</li>
+    </ul>
+
+    <!-- 🧠 Bouton IA + effet -->
+    <div class="mt-8">
+      <button onclick="activateIA()" class="bg-red-600 hover:bg-red-800 text-white font-bold py-2 px-6 rounded-full shadow-lg transition-all duration-300">
+        🧠 Activer RHYDRAKON IA
+      </button>
+    </div>
+
+    <!-- 🛡️ Logo pulsant -->
+    <div class="mt-10 flex justify-center">
+      <div class="w-16 h-16 rounded-full border-4 border-red-500 flex items-center justify-center pulse-ring">
+        <span class="text-red-500 text-2xl">🛡️</span>
+      </div>
+    </div>
+
+    <!-- 🔒 Statut dynamique -->
+    <div class="mt-6 text-center">
+      <span class="text-sm text-gray-300">Statut du système RHYDRAKON DEFENSE™ :</span><br>
+      <span id="rhydrakon-status" class="inline-block mt-1 px-4 py-1 rounded-full bg-green-500 text-white font-semibold animate-pulse">
+        ✅ Actif
+      </span>
+    </div>
+
+    <!-- 🔊 Notification SEYRA™ -->
+    <div id="seyra-notification" class="mt-6 hidden text-center text-blue-400 font-bold text-lg">
+      🧠 SEYRA™ : Système IA de défense activé avec succès.
+    </div>
+  </section>
+
+  <!-- 🔧 SCRIPTS JS -->
+  <script>
+    function activateIA() {
+      const section = document.getElementById('rhydrakon-section');
+      const status = document.getElementById('rhydrakon-status');
+      const seyra = document.getElementById('seyra-notification');
+
+      section.classList.add('ia-activation-effect');
+      seyra.classList.remove('hidden');
+      seyra.innerText = "🧠 SEYRA™ : Activation confirmée. Défenses adaptatives en cours.";
+
+      // changer statut dynamiquement
+      setTimeout(() => {
+        status.innerText = "⚠️ Alerte détectée";
+        status.className = "inline-block mt-1 px-4 py-1 rounded-full bg-yellow-500 text-white font-semibold animate-pulse";
+      }, 3000);
+
+      setTimeout(() => {
+        status.innerText = "🚫 Hors ligne temporaire";
+        status.className = "inline-block mt-1 px-4 py-1 rounded-full bg-red-600 text-white font-semibold animate-pulse";
+      }, 6000);
+
+      setTimeout(() => {
+        status.innerText = "✅ Actif";
+        status.className = "inline-block mt-1 px-4 py-1 rounded-full bg-green-500 text-white font-semibold animate-pulse";
+      }, 9000);
+
+      // synthèse vocale
+      if (window.speechSynthesis.speaking) {
+        window.speechSynthesis.cancel();
+      }
       const speech = new SpeechSynthesisUtterance("Système SEYRA activé. Surveillance intelligente en cours.");
       speech.lang = "fr-FR";
       speech.volume = 1;
