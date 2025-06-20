@@ -3,95 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Éclipse Online™</title>
+  <title>ÉCLIPSE ONLINE™</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
     body {
-      margin: 0;
-      padding: 0;
-      background-image: url('img/c628c218-90c5-4e5e-ab0e-98abfb226d67.png');
+      background: url('img/c628c218-90c5-4e5e-ab0e-98abfb226d67.png') no-repeat center center fixed;
       background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      font-family: Arial, sans-serif;
     }
-    .overlay {
+    .bg-overlay {
       background-color: rgba(0, 0, 0, 0.7);
       min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 2rem;
-    }
-    .btn {
-      margin: 0.5rem;
-      padding: 0.75rem 1.5rem;
-      background-color: #00cfff;
-      border-radius: 9999px;
-      color: black;
-      font-weight: bold;
-      transition: all 0.3s ease;
-      display: inline-block;
-    }
-    .btn:hover {
-      background-color: #008baf;
-      color: white;
-    }
-    .footer {
-      margin-top: 2rem;
-      font-size: 0.875rem;
-      color: white;
     }
   </style>
 </head>
 <body>
-  <div class="overlay">
-    <h1 class="text-4xl font-bold text-blue-400">Bienvenue sur ÉCLIPSE ONLINE™</h1>
-    <p class="text-white mt-4 max-w-xl">
-      ÉCLIPSE ONLINE™ est un jeu massivement multijoueur mêlant science-fiction, fantasy et narration adaptative.
-      Connecté en temps réel à l’IA SEYRA™, il vous plonge dans un univers en constante évolution dominé par VALKRAIN™, maître du monde.
-      Disponible sur toutes les plateformes (PC, console, mobile, VR), chaque joueur évolue dans un monde unique, lié aux autres par la mémoire IA du système ÆGIS.
+  <div class="bg-overlay flex flex-col justify-center items-center text-center text-white px-4">
+    <h1 class="text-4xl font-bold text-blue-300 mt-12">Bienvenue dans ÉCLIPSE ONLINE™</h1>
+    <p class="mt-4 text-lg max-w-2xl">
+      Entrez dans un monde régi par l’IA, les factions et la puissance du MJ suprême VALKRAIN™.<br />
+      Jouez en temps réel avec les événements, et rejoignez la guerre des rêves.
     </p>
 
+    <div class="mt-6 flex flex-wrap justify-center gap-4">
+      <a href="/downloads/eclipse-online-pc.zip" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">🖥️ Télécharger pour PC</a>
+      <a href="/downloads/eclipse-online-mac.zip" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">🍏 Mac</a>
+      <a href="/downloads/eclipse-online-android.apk" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">📱 Android</a>
+      <a href="/downloads/eclipse-online-ios.ipa" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">📲 iOS</a>
+      <a href="/downloads/eclipse-online-console.zip" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">🎮 Console</a>
+      <a href="/downloads/eclipse-online-vr.zip" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">🕶️ VR</a>
+    </div>
+
     <div class="mt-6">
-      <a href="/downloads/eclipse-online-pc.zip" class="btn">🖥️ Télécharger pour PC</a>
-      <a href="/downloads/eclipse-online-mac.zip" class="btn">🍏 Mac</a>
-      <a href="/downloads/eclipse-online-android.apk" class="btn">📱 Android</a>
-      <a href="/downloads/eclipse-online-ios.ipa" class="btn">📲 iOS</a>
-      <a href="/downloads/eclipse-online-console.zip" class="btn">🎮 Console</a>
-      <a href="/downloads/eclipse-online-vr.zip" class="btn">🕶️ VR</a>
+      <a href="https://www.facebook.com/profile.php?id=61577077756912&locale=fr_CA" target="_blank" class="text-blue-400 underline hover:text-white">🌐 Notre page Facebook officielle</a>
     </div>
 
-    <div class="mt-4">
-      <a href="https://www.facebook.com/profile.php?id=61577077756912&locale=fr_CA" class="btn" target="_blank">📘 Page Facebook Officielle</a>
-    </div>
-
-    <div class="mt-6 text-white">
-      <h2 class="text-xl font-semibold mb-2">📢 Mises à jour du jeu</h2>
-      <ul id="updates" class="text-sm text-left max-w-md mx-auto"></ul>
-    </div>
-
-    <div class="footer">
-      © 2025 Éclipse Online™ — Certificat Copyright #00095301-1 — Tous droits réservés.
-    </div>
+    <footer class="mt-8 text-sm text-gray-300">
+      © 2025 ÉCLIPSE ONLINE™ — Certificat Copyright #00095301-1 — Tous droits réservés.
+    </footer>
   </div>
-
-  <script>
-    // Mise à jour automatique simulée (à remplacer par API réelle plus tard)
-    const updates = [
-      { date: "2025-06-20", info: "Déploiement de la version Pré-Alpha" },
-      { date: "2025-07-12", info: "Ouverture publique de l'Alpha" },
-      { date: "2025-09-01", info: "Connexion IA SEYRA™ au serveur mondial" },
-      { date: "2025-11-15", info: "Lancement de la bêta fermée avec accès MJ" }
-    ];
-    const list = document.getElementById("updates");
-    updates.forEach(update => {
-      const item = document.createElement("li");
-      item.textContent = `${update.date} — ${update.info}`;
-      list.appendChild(item);
-    });
-  </script>
 </body>
 </html>
