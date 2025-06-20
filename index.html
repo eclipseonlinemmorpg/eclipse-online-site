@@ -2,17 +2,13 @@ import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes, Link, Navigate } from "react-router-dom";
 import { motion } from "framer-motion";
 
-const bgImage = "/img/fond.jpg"; // Assure-toi que cette image est dans le dossier public/img
+// Ton image de fond : assure-toi qu'elle est bien dans le dossier public/img/
+const bgImage = "/img/fond.jpg";
 
 const Home = () => (
   <div className="min-h-screen bg-cover bg-center text-white" style={{ backgroundImage: `url(${bgImage})` }}>
     <div className="bg-black bg-opacity-70 min-h-screen flex flex-col items-center justify-center p-8 text-center">
-      <motion.h1
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        className="text-4xl font-bold text-blue-300"
-      >
+      <motion.h1 initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} className="text-4xl font-bold text-blue-300">
         Bienvenue sur ÉCLIPSE ONLINE™
       </motion.h1>
       <p className="mt-4 max-w-xl">
@@ -74,13 +70,17 @@ const App = () => {
           <Link to="/connexion">🔐 Connexion</Link>
           {isLoggedIn && <Link to="/mon-personnage">🧬 Mon Personnage</Link>}
         </nav>
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/boutique" element={<Boutique />} />
           <Route path="/chat" element={<Chat />} />
           <Route path="/connexion" element={<Connexion onLogin={handleLogin} />} />
-          <Route path="/mon-personnage" element={isLoggedIn ? <MonPersonnage /> : <Navigate to="/connexion" replace />} />
+          <Route
+            path="/mon-personnage"
+            element={isLoggedIn ? <MonPersonnage /> : <Navigate to="/connexion" replace />}
+          />
         </Routes>
       </div>
     </Router>
