@@ -4,16 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ÉCLIPSE ONLINE™</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
   <style>
     body {
       background: url('https://scontent-lga3-2.xx.fbcdn.net/v/t39.30808-6/508394426_122107395428902591_7595419777272986316_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=vppuUEQR2TIQ7kNvwEXKr0U&_nc_oc=AdlmCi1x2oCRIscwxG7lQT2B2_ZRQz-QJf--I7yrtgnkhVqDNjCVrPWeOeBpMPeNvoQ&_nc_zt=23&_nc_ht=scontent-lga3-2.xx&_nc_gid=tZ6qb9rr0hDTWTlbX6xOWg&oh=00_AfNzuU6XnA9DmVLpW4jVtC2OmM9mt9V9McGpbqW0IUDS1w&oe=685A9AC5') center center / cover no-repeat fixed;
       background-size: cover;
       font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
     }
-
     .bg-overlay {
       background-color: rgba(0, 0, 0, 0.7);
       min-height: 100vh;
@@ -24,7 +21,6 @@
       text-align: center;
       padding: 2rem;
     }
-
     .button {
       margin: 0.5rem;
       padding: 0.75rem 1.5rem;
@@ -36,39 +32,56 @@
       text-decoration: none;
       display: inline-block;
     }
-
     .button:hover {
       background-color: #008baf;
       color: white;
     }
-
     @keyframes fadeInSmooth {
-      from { opacity: 0; transform: translateY(40px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
     .fade-in {
       animation: fadeInSmooth 1.2s ease-out both;
     }
-
     @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.6); }
-      70% { box-shadow: 0 0 0 12px rgba(255, 0, 0, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(255, 0, 0, 0); }
+      0% {
+        box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.6);
+      }
+      70% {
+        box-shadow: 0 0 0 12px rgba(255, 0, 0, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+      }
     }
     .pulse-ring {
       animation: pulse 2s infinite;
     }
-
     .ia-activation-effect {
       border: 2px solid #ff5555;
       box-shadow: 0 0 20px 5px #ff0000;
       animation: iaFlash 1.5s ease-out forwards;
     }
-
     @keyframes iaFlash {
-      0% { opacity: 0.3; transform: scale(0.9); }
-      50% { opacity: 1; transform: scale(1.05); }
-      100% { opacity: 1; transform: scale(1); box-shadow: 0 0 30px 10px #ff2222; }
+      0% {
+        opacity: 0.3;
+        transform: scale(0.9);
+      }
+      50% {
+        opacity: 1;
+        transform: scale(1.05);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+        box-shadow: 0 0 30px 10px #ff2222;
+      }
     }
   </style>
 </head>
@@ -132,7 +145,7 @@
 
     <!-- 🔒 Statut dynamique -->
     <div class="mt-6 text-center">
-      <span class="text-sm text-gray-300">Statut du système RHYDRAKON DEFENSE™ :</span><br>
+      <span class="text-sm text-gray-300">Statut du système RHYDRAKON DEFENSE™ :</span><br />
       <span id="rhydrakon-status" class="inline-block mt-1 px-4 py-1 rounded-full bg-green-500 text-white font-semibold animate-pulse">
         ✅ Actif
       </span>
@@ -172,90 +185,12 @@
       }, 9000);
 
       // synthèse vocale
-      if (window.speechSynthesis.speaking) {
-        window.speechSynthesis.cancel();
-      }
       const speech = new SpeechSynthesisUtterance("Système SEYRA activé. Surveillance intelligente en cours.");
       speech.lang = "fr-FR";
       speech.volume = 1;
       speech.rate = 0.95;
       speech.pitch = 1.2;
       window.speechSynthesis.speak(speech);
-    }
-  </script>
-</body>
-</html><!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ÉCLIPSE ONLINE™</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <style>
-    body {
-      background: url('https://scontent-lga3-2.xx.fbcdn.net/v/t39.30808-6/508394426_122107395428902591_7595419777272986316_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=vppuUEQR2TIQ7kNvwEXKr0U&_nc_oc=AdlmCi1x2oCRIscwxG7lQT2B2_ZRQz-QJf--I7yrtgnkhVqDNjCVrPWeOeBpMPeNvoQ&_nc_zt=23&_nc_ht=scontent-lga3-2.xx&_nc_gid=tZ6qb9rr0hDTWTlbX6xOWg&oh=00_AfNzuU6XnA9DmVLpW4jVtC2OmM9mt9V9McGpbqW0IUDS1w&oe=685A9AC5') center center / cover no-repeat fixed;
-      background-size: cover;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-
-    .bg-overlay {
-      background-color: rgba(0, 0, 0, 0.7);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 2rem;
-    }
-
-    .button {
-      margin: 0.5rem;
-      padding: 0.75rem 1.5rem;
-      background-color: #00cfff;
-      border-radius: 9999px;
-      color: black;
-      font-weight: bold;
-      transition: all 0.3s ease;
-      text-decoration: none;
-      display: inline-block;
-    }
-
-    .button:hover {
-      background-color: #008baf;
-      color: white;
-    }
-
-    @keyframes fadeInSmooth {
-      from { opacity: 0; transform: translateY(40px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .fade-in {
-      animation: fadeInSmooth 1.2s ease-out both;
-    }
-
-    @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.6); }
-      70% { box-shadow: 0 0 0 12px rgba(255, 0, 0, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(255, 0, 0, 0); }
-    }
-    .pulse-ring {
-      animation: pulse 2s infinite;
-    }
-
-    .ia-activation-effect {
-      border: 2px solid #ff5555;
-      box-shadow: 0 0 20px 5px #ff0000;
-      animation: iaFlash 1.5s ease-out forwards;
-    }
-
-    @keyframes iaFlash {
-      0% { opacity: 0.3; transform: scale(0.9); }
-      50% { opacity: 1; transform: scale(1.05); }
-      100% { opacity: 1; transform: scale(1); box-shadow: 0 0 30px 10px #ff2222; }
-    }
     }
   </script>
 </body>
