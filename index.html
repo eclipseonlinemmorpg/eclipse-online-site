@@ -5,81 +5,84 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Éclipse Online</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@google-cloud/translate"></script>
+  <style>
+    body { background: #0a0a0a; color: #e0e0e0; font-family: 'Segoe UI', sans-serif; }
+    header, footer { background-color: #1a1a1a; padding: 1rem; text-align: center; }
+    .hero { background-image: url('img/ae-gis-bg.jpg'); background-size: cover; background-position: center; height: 80vh; }
+  </style>
 </head>
-<body class="bg-black text-white font-sans">
-  <header class="bg-gradient-to-b from-gray-900 to-black p-6 text-center">
-    <h1 class="text-5xl font-bold tracking-wide mb-2">Éclipse Online</h1>
-    <p class="text-xl text-gray-400">Un monde infini. Une immersion totale. Votre aventure commence ici.</p>
-    <div class="mt-6">
-      <a href="#" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-xl transition">
-        Télécharger la version Alpha
-      </a>
-    </div>
+<body>
+  <header>
+    <h1 class="text-3xl font-bold text-cyan-400">ÉCLIPSE ONLINE - CENTRE IA ÆGIS</h1>
+    <p class="text-sm">Synchronisation en temps réel avec le serveur | Traduction multilingue automatique | Contrôle IA actif</p>
   </header>
-  <section class="relative h-[70vh] flex items-center justify-center bg-cover bg-center" style="background-image: url('img/image-eclipse.jpg');">
-    <div class="bg-black bg-opacity-60 p-8 rounded-xl text-center">
-      <h2 class="text-4xl font-bold mb-4">Plongez dans l'univers le plus évolutif jamais créé</h2>
-      <p class="text-lg text-gray-300">Inspiré de vos mondes préférés – fantasy, science-fiction, surnaturel – Éclipse Online est vivant, connecté à la réalité, et sans fin.</p>
+
+  <section class="hero flex items-center justify-center">
+    <div class="bg-black bg-opacity-60 p-6 rounded-xl">
+      <h2 class="text-2xl font-bold mb-4">Bienvenue dans l'univers d'Éclipse Online</h2>
+      <p>Explorez un monde vivant, connecté à la réalité, dirigé par l'IA SEYRA™ et le MJ suprême VALKRAIN™.</p>
+      <div id="countdown" class="text-xl mt-4"></div>
     </div>
   </section>
-  <section class="py-16 px-6 bg-gray-900">
-    <h3 class="text-3xl font-bold text-center mb-10">Fonctionnalités clés</h3>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-      <div>
-        <h4 class="text-xl font-semibold mb-2">🌍 Monde infini</h4>
-        <p class="text-gray-400">Aucune limite de territoire, des univers entiers à explorer.</p>
-      </div>
-      <div>
-        <h4 class="text-xl font-semibold mb-2">🧠 IA Adaptative</h4>
-        <p class="text-gray-400">Des PNJ dynamiques, une narration qui répond à vos choix.</p>
-      </div>
-      <div>
-        <h4 class="text-xl font-semibold mb-2">🎮 Jouable partout</h4>
-        <p class="text-gray-400">PC, Mac, Mobile, Consoles. Version Lite ou Haute performance.</p>
-      </div>
+
+  <section class="p-8 grid md:grid-cols-3 gap-6">
+    <div class="bg-gray-900 p-4 rounded-xl">
+      <h3 class="text-xl font-semibold text-blue-300">Mises à jour en temps réel</h3>
+      <ul id="server-events" class="text-sm"></ul>
+    </div>
+    <div class="bg-gray-900 p-4 rounded-xl">
+      <h3 class="text-xl font-semibold text-green-300">Téléchargements</h3>
+      <ul class="text-sm">
+        <li><a href="/downloads/pc.zip" class="underline">🖥️ PC</a></li>
+        <li><a href="/downloads/console.zip" class="underline">🎮 Console</a></li>
+        <li><a href="/downloads/mobile.apk" class="underline">📱 Mobile</a></li>
+        <li><a href="/downloads/vr.zip" class="underline">🕶️ VR</a></li>
+      </ul>
+    </div>
+    <div class="bg-gray-900 p-4 rounded-xl">
+      <h3 class="text-xl font-semibold text-purple-300">Espace Joueur</h3>
+      <p class="text-sm">Connectez-vous pour accéder à votre personnage, avatar, classe, niveau et statistiques.</p>
     </div>
   </section>
-  <section class="py-16 bg-black text-center">
-    <h3 class="text-3xl font-bold mb-6">🚀 Alpha disponible dans :</h3>
-    <div id="countdown" class="text-4xl font-mono text-indigo-500"></div>
-  </section>
-  <section class="py-16 bg-gray-800 px-6">
-    <h3 class="text-3xl font-bold text-center mb-10">Hall des Héros</h3>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-center">
-      <div class="bg-gray-900 p-6 rounded-xl shadow-lg">
-        <p class="text-gray-300 italic">"Éclipse est plus qu’un jeu. C’est un voyage."</p>
-        <p class="mt-4 font-bold">– Testeur Alpha #001</p>
-      </div>
-      <div class="bg-gray-900 p-6 rounded-xl shadow-lg">
-        <p class="text-gray-300 italic">"Chaque session est unique. Je n’ai jamais vu ça."</p>
-        <p class="mt-4 font-bold">– MJ Test Mordrex</p>
-      </div>
-    </div>
-  </section>
-  <footer class="bg-gray-900 text-center text-gray-500 p-6">
-    <p>&copy; 2025 Éclipse Online. Tous droits réservés.</p>
-    <div class="mt-2 flex justify-center gap-4">
-      <a href="#" class="hover:text-white">Facebook</a>
-      <a href="#" class="hover:text-white">Discord</a>
-      <a href="#" class="hover:text-white">Mentions légales</a>
-    </div>
+
+  <footer>
+    <p>© 2025 Éclipse Online™ | Tous droits réservés | Copyright n°00095301-1</p>
+    <p>Propulsé par l’IA adaptative ÆGIS™ | Certifié CopyrightDepot</p>
   </footer>
+
   <script>
-    const countdown = () => {
-      const end = new Date("2025-07-01T00:00:00").getTime();
+    // Simulation de récupération des événements en temps réel (remplacer par appel API réel)
+    const events = [
+      { date: "2025-06-20", info: "Déploiement IA SEYRA v3.5" },
+      { date: "2025-07-01", info: "Sortie Alpha publique" },
+      { date: "2025-08-15", info: "Ouverture bêta fermée" },
+      { date: "2025-10-31", info: "Final Release Mondiale" }
+    ];
+
+    const list = document.getElementById("server-events");
+    events.forEach(e => {
+      const item = document.createElement("li");
+      item.innerText = `${e.date} : ${e.info}`;
+      list.appendChild(item);
+    });
+
+    // Compte à rebours Alpha (exemple)
+    function countdown() {
+      const end = new Date("2025-07-01T00:00:00Z").getTime();
       const now = new Date().getTime();
       const diff = end - now;
       if (diff <= 0) {
-        document.getElementById("countdown").innerText = "L'Alpha est lancée !";
+        document.getElementById("countdown").innerText = "✅ L'Alpha est lancée !";
         return;
       }
-      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-      const minutes = Math.floor((diff / (1000 * 60)) % 60);
-      const seconds = Math.floor((diff / 1000) % 60);
-      document.getElementById("countdown").innerText = `${days}j ${hours}h ${minutes}m ${seconds}s`;
+      const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const m = Math.floor((diff / (1000 * 60)) % 60);
+      const s = Math.floor((diff / 1000) % 60);
+      document.getElementById("countdown").innerText = `⏳ Alpha dans ${d}j ${h}h ${m}m ${s}s`;
       setTimeout(countdown, 1000);
-    };
+    }
     countdown();
   </script>
 </body>
