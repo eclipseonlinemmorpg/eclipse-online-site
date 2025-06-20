@@ -1,100 +1,42 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ÉCLIPSE ONLINE™</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <style>
-    body {
-      background: url('https://scontent-lga3-2.xx.fbcdn.net/v/t39.30808-6/508394426_122107395428902591_7595419777272986316_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=vppuUEQR2TIQ7kNvwEXKr0U&_nc_oc=AdlmCi1x2oCRIscwxG7lQT2B2_ZRQz-QJf--I7yrtgnkhVqDNjCVrPWeOeBpMPeNvoQ&_nc_zt=23&_nc_ht=scontent-lga3-2.xx&_nc_gid=tZ6qb9rr0hDTWTlbX6xOWg&oh=00_AfNzuU6XnA9DmVLpW4jVtC2OmM9mt9V9McGpbqW0IUDS1w&oe=685A9AC5') center center / cover no-repeat fixed;
-      background-size: cover;
-      font-family: Arial, sans-serif;
-    }
-    .bg-overlay {
-      background-color: rgba(0, 0, 0, 0.7);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 2rem;
-    }
-    .button {
-      margin: 0.5rem;
-      padding: 0.75rem 1.5rem;
-      background-color: #00cfff;
-      border-radius: 9999px;
-      color: black;
-      font-weight: bold;
-      transition: all 0.3s ease;
-      text-decoration: none;
-      display: inline-block;
-    }
-    .button:hover {
-      background-color: #008baf;
-      color: white;
-    }
+<!-- SECTION BLACKCORE SENTINEL™ AMÉLIORÉE -->
+<section class="max-w-4xl mx-auto px-4 py-12 text-white fade-in">
+  <h2 class="text-3xl font-bold mb-6 text-red-500 drop-shadow-lg">
+    🔒 Pourquoi choisir BLACKCORE SENTINEL™ ?
+  </h2>
 
-    /* Animation fade-in + glow rouge */
-    @keyframes fade-in {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .animate-fade-in {
-      animation: fade-in 1s ease-out both;
-    }
-    .red-glow {
-      text-shadow: 0 0 8px rgba(255, 0, 0, 0.9);
-    }
-  </style>
-</head>
-<body>
-  <div class="bg-overlay">
-    <h1 class="text-4xl font-bold text-blue-300">Bienvenue sur ÉCLIPSE ONLINE™</h1>
-    <p class="mt-4 text-white max-w-xl">
-      Un monde connecté en temps réel, dirigé par VALKRAIN™ et l’IA SEYRA™. Disponible sur toutes les plateformes.
-    </p>
+  <p class="mb-6 text-gray-200 text-lg leading-relaxed">
+    Conçu pour les infrastructures critiques, <span class="text-red-400 font-semibold">BLACKCORE SENTINEL™</span> dépasse les antivirus classiques.
+    Il protège vos <span class="text-red-300">PC, serveurs, joueurs, IA maîtres (MJ), consoles, mobiles</span> et systèmes <span class="text-red-300">VR</span> avec un système IA évolutif et intelligent.
+  </p>
 
-    <div class="mt-6">
-      <a href="/downloads/eclipse-online-pc.zip" class="button">🖥️ Télécharger PC</a>
-      <a href="/downloads/eclipse-online-mac.zip" class="button">🍏 Télécharger Mac</a>
-      <a href="/downloads/eclipse-online-android.apk" class="button">📱 Android</a>
-      <a href="/downloads/eclipse-online-ios.ipa" class="button">📲 iOS</a>
-      <a href="/downloads/eclipse-online-console.zip" class="button">🎮 Console</a>
-      <a href="/downloads/eclipse-online-vr.zip" class="button">🕶️ VR</a>
-    </div>
+  <ul class="list-disc ml-6 space-y-2 text-red-300 text-base">
+    <li>🧠 IA évolutive et auto-apprenante</li>
+    <li>🛡️ Détection comportementale en temps réel & anti-triche</li>
+    <li>🌐 Protection DDoS proactive multi-niveaux</li>
+    <li>📊 Supervision via SEYRA™ IA Command Center</li>
+    <li>🔐 Chiffrement total + pare-feu IA dynamique</li>
+    <li>🧬 Support universel : PC, console, VR, mobile</li>
+  </ul>
 
-    <div class="mt-6">
-      <a href="https://www.facebook.com/profile.php?id=61577077756912&locale=fr_CA" target="_blank" class="text-blue-400 underline hover:text-white">
-        🌐 Page Facebook Officielle
-      </a>
-    </div>
-
-    <footer class="mt-10 text-sm text-white">
-      © 2025 ÉCLIPSE ONLINE™ — Certificat #00095301-1 — Tous droits réservés.
-    </footer>
+  <!-- 🧠 Bouton activation IA -->
+  <div class="mt-8">
+    <button onclick="alert('Système IA activé. Séquence SEYRA™ engagée.')" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-6 rounded-full shadow-lg transition-all duration-300">
+      🧠 Activer BLACKCORE IA
+    </button>
   </div>
 
-  <!-- Section BLACKCORE SENTINEL™ -->
-  <section class="max-w-4xl mx-auto px-4 py-12 text-red-400 animate-fade-in">
-    <h2 class="text-3xl font-bold mb-4 text-red-500 red-glow">Pourquoi choisir BLACKCORE SENTINEL™ ?</h2>
-    <p class="mb-4 text-red-300">
-      Conçu pour les infrastructures critiques, <strong class="text-red-400">BLACKCORE SENTINEL™</strong> dépasse les antivirus classiques.  
-      Il protège vos <strong>PC, serveurs de jeu, joueurs, IA maîtres (MJ), consoles, mobiles</strong> et systèmes <strong>VR</strong> avec un système IA évolutif.
-    </p>
-    <ul class="list-disc ml-6 mb-4 text-red-400 space-y-1">
-      <li>🧠 <strong>IA évolutive et auto-adaptative</strong></li>
-      <li>🛡️ Détection comportementale avancée & anti-triche</li>
-      <li>🌐 Protection DDoS proactive multi-niveaux</li>
-      <li>📊 Supervision en temps réel via SEYRA™</li>
-      <li>🔐 Chiffrement + pare-feu IA dynamique</li>
-      <li>🧬 Support complet : PC, console, VR, mobile</li>
-    </ul>
-    <p class="mt-4 text-red-500 font-semibold italic red-glow">
-      BLACKCORE SENTINEL™ — Plus qu’un antivirus. Un bouclier vivant.
-    </p>
-  </section>
-</body>
-</html>
+  <!-- 🛡️ Logo animé de sécurité -->
+  <div class="mt-10 flex justify-center">
+    <div class="w-16 h-16 rounded-full border-4 border-red-500 animate-pulse flex items-center justify-center">
+      <span class="text-red-500 text-2xl">🛡️</span>
+    </div>
+  </div>
+
+  <!-- 🔒 Statut RHYDRAKON DEFENSE -->
+  <div class="mt-6 text-center">
+    <span class="text-sm text-gray-300">Statut du système RHYDRAKON DEFENSE™ :</span><br>
+    <span id="rhydrakon-status" class="inline-block mt-1 px-4 py-1 rounded-full bg-green-500 text-white font-semibold animate-pulse">
+      ✅ Actif
+    </span>
+  </div>
+</section>
