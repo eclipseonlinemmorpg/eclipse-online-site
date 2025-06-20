@@ -1,90 +1,70 @@
-import React, { useState } from "react";
-import { BrowserRouter as Router, Route, Routes, Link, Navigate } from "react-router-dom";
-import { motion } from "framer-motion";
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ÉCLIPSE ONLINE™</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('https://scontent-lga3-2.xx.fbcdn.net/v/t39.30808-6/508394426_122107395428902591_7595419777272986316_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=vppuUEQR2TIQ7kNvwEXKr0U&_nc_oc=AdlmCi1x2oCRIscwxG7lQT2B2_ZRQz-QJf--I7yrtgnkhVqDNjCVrPWeOeBpMPeNvoQ&_nc_zt=23&_nc_ht=scontent-lga3-2.xx&_nc_gid=tZ6qb9rr0hDTWTlbX6xOWg&oh=00_AfNzuU6XnA9DmVLpW4jVtC2OmM9mt9V9McGpbqW0IUDS1w&oe=685A9AC5') no-repeat center center fixed;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+    }
+    .bg-overlay {
+      background-color: rgba(0, 0, 0, 0.7);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
+    .button {
+      margin: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #00cfff;
+      border-radius: 9999px;
+      color: black;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .button:hover {
+      background-color: #008baf;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-overlay">
+    <h1 class="text-4xl font-bold text-blue-300">Bienvenue sur ÉCLIPSE ONLINE™</h1>
+    <p class="mt-4 text-white max-w-xl">
+      Un monde connecté en temps réel, dirigé par VALKRAIN™ et l’IA SEYRA™. Disponible sur toutes les plateformes.
+    </p>
 
-// Ton image de fond : assure-toi qu'elle est bien dans le dossier public/img/
-const bgImage = url('https://scontent-lga3-2.xx.fbcdn.net/v/t39.30808-6/508394426_122107395428902591_7595419777272986316_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=vppuUEQR2TIQ7kNvwEXKr0U&_nc_oc=AdlmCi1x2oCRIscwxG7lQT2B2_ZRQz-QJf--I7yrtgnkhVqDNjCVrPWeOeBpMPeNvoQ&_nc_zt=23&_nc_ht=scontent-lga3-2.xx&_nc_gid=tZ6qb9rr0hDTWTlbX6xOWg&oh=00_AfNzuU6XnA9DmVLpW4jVtC2OmM9mt9V9McGpbqW0IUDS1w&oe=685A9AC5') center center / cover no-repeat fixed;
-
-const Home = () => (
-  <div className="min-h-screen bg-cover bg-center text-white" style={{ backgroundImage: `url(${bgImage})` }}>
-    <div className="bg-black bg-opacity-70 min-h-screen flex flex-col items-center justify-center p-8 text-center">
-      <motion.h1 initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} className="text-4xl font-bold text-blue-300">
-        Bienvenue sur ÉCLIPSE ONLINE™
-      </motion.h1>
-      <p className="mt-4 max-w-xl">
-        Plongez dans un univers en temps réel dirigé par VALKRAIN™ et l'IA SEYRA™, avec des mises à jour dynamiques, une sécurité ÆGIS™ et un monde connecté à votre personnage.
-      </p>
-
-      <div className="mt-6 flex flex-wrap justify-center gap-4">
-        <a href="/downloads/eclipse-online-pc.zip" className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">🖥️ PC</a>
-        <a href="/downloads/eclipse-online-mac.zip" className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">🍏 Mac</a>
-        <a href="/downloads/eclipse-online-android.apk" className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">📱 Android</a>
-        <a href="/downloads/eclipse-online-ios.ipa" className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">📲 iOS</a>
-        <a href="/downloads/eclipse-online-console.zip" className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">🎮 Console</a>
-        <a href="/downloads/eclipse-online-vr.zip" className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">🕶️ VR</a>
-      </div>
-
-      <div className="mt-6">
-        <a href="https://www.facebook.com/profile.php?id=61577077756912&locale=fr_CA" target="_blank" rel="noreferrer" className="text-blue-400 underline hover:text-white">
-          🌐 Page Facebook Officielle
-        </a>
-      </div>
+    <div class="mt-6">
+      <a href="/downloads/eclipse-online-pc.zip" class="button">🖥️ Télécharger PC</a>
+      <a href="/downloads/eclipse-online-mac.zip" class="button">🍏 Télécharger Mac</a>
+      <a href="/downloads/eclipse-online-android.apk" class="button">📱 Android</a>
+      <a href="/downloads/eclipse-online-ios.ipa" class="button">📲 iOS</a>
+      <a href="/downloads/eclipse-online-console.zip" class="button">🎮 Console</a>
+      <a href="/downloads/eclipse-online-vr.zip" class="button">🕶️ VR</a>
     </div>
+
+    <div class="mt-6">
+      <a href="https://www.facebook.com/profile.php?id=61577077756912&locale=fr_CA" target="_blank" class="text-blue-400 underline hover:text-white">
+        🌐 Page Facebook Officielle
+      </a>
+    </div>
+
+    <footer class="mt-10 text-sm text-white">
+      © 2025 ÉCLIPSE ONLINE™ — Certificat #00095301-1 — Tous droits réservés.
+    </footer>
   </div>
-);
-
-const Blog = () => <div className="p-10 text-white">📘 Blog en construction…</div>;
-const Boutique = () => <div className="p-10 text-white">🛒 Boutique à venir…</div>;
-const Chat = () => <div className="p-10 text-white">💬 Chat communautaire en ligne…</div>;
-
-const Connexion = ({ onLogin }) => (
-  <div className="p-10 text-white text-center">
-    <h2 className="text-2xl font-bold mb-4">🔐 Connexion</h2>
-    <p className="mb-6">Entrez dans votre interface sécurisée.</p>
-    <button
-      onClick={onLogin}
-      className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded"
-    >
-      Se connecter
-    </button>
-  </div>
-);
-
-const MonPersonnage = () => <div className="p-10 text-white">🧬 Affichage de votre avatar, classe, stats…</div>;
-
-const App = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-  const handleLogin = () => {
-    setIsLoggedIn(true);
-  };
-
-  return (
-    <Router>
-      <div className="bg-gray-900 min-h-screen">
-        <nav className="bg-black bg-opacity-70 text-white p-4 flex justify-around shadow-md">
-          <Link to="/">🏠 Accueil</Link>
-          <Link to="/blog">📘 Blog</Link>
-          <Link to="/boutique">🛒 Boutique</Link>
-          <Link to="/chat">💬 Chat</Link>
-          <Link to="/connexion">🔐 Connexion</Link>
-          {isLoggedIn && <Link to="/mon-personnage">🧬 Mon Personnage</Link>}
-        </nav>
-
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/boutique" element={<Boutique />} />
-          <Route path="/chat" element={<Chat />} />
-          <Route path="/connexion" element={<Connexion onLogin={handleLogin} />} />
-          <Route
-            path="/mon-personnage"
-            element={isLoggedIn ? <MonPersonnage /> : <Navigate to="/connexion" replace />}
-          />
-        </Routes>
-      </div>
-    </Router>
-  );
-};
-
-export default App;
+</body>
+</html>
