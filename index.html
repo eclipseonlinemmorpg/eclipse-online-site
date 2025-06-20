@@ -1,16 +1,24 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import React, { useState } from "react";
+import { BrowserRouter as Router, Route, Routes, Link, Navigate } from "react-router-dom";
 import { motion } from "framer-motion";
 
+const bgImage = "/img/fond.jpg"; // Assure-toi que cette image est dans le dossier public/img
+
 const Home = () => (
-  <div className="min-h-screen bg-cover bg-center text-white" style={{ backgroundImage: "url('https://scontent-lga3-2.xx.fbcdn.net/v/t39.30808-6/508394426_122107395428902591_7595419777272986316_n.jpg?...')" }}>
+  <div className="min-h-screen bg-cover bg-center text-white" style={{ backgroundImage: `url(${bgImage})` }}>
     <div className="bg-black bg-opacity-70 min-h-screen flex flex-col items-center justify-center p-8 text-center">
-      <motion.h1 initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} className="text-4xl font-bold text-blue-300">
+      <motion.h1
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        className="text-4xl font-bold text-blue-300"
+      >
         Bienvenue sur ÉCLIPSE ONLINE™
       </motion.h1>
       <p className="mt-4 max-w-xl">
         Plongez dans un univers en temps réel dirigé par VALKRAIN™ et l'IA SEYRA™, avec des mises à jour dynamiques, une sécurité ÆGIS™ et un monde connecté à votre personnage.
       </p>
+
       <div className="mt-6 flex flex-wrap justify-center gap-4">
         <a href="/downloads/eclipse-online-pc.zip" className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">🖥️ PC</a>
         <a href="/downloads/eclipse-online-mac.zip" className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">🍏 Mac</a>
@@ -19,8 +27,11 @@ const Home = () => (
         <a href="/downloads/eclipse-online-console.zip" className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">🎮 Console</a>
         <a href="/downloads/eclipse-online-vr.zip" className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">🕶️ VR</a>
       </div>
+
       <div className="mt-6">
-        <a href="https://www.facebook.com/profile.php?id=61577077756912&locale=fr_CA" target="_blank" className="text-blue-400 underline hover:text-white">🌐 Page Facebook Officielle</a>
+        <a href="https://www.facebook.com/profile.php?id=61577077756912&locale=fr_CA" target="_blank" rel="noreferrer" className="text-blue-400 underline hover:text-white">
+          🌐 Page Facebook Officielle
+        </a>
       </div>
     </div>
   </div>
@@ -29,30 +40,51 @@ const Home = () => (
 const Blog = () => <div className="p-10 text-white">📘 Blog en construction…</div>;
 const Boutique = () => <div className="p-10 text-white">🛒 Boutique à venir…</div>;
 const Chat = () => <div className="p-10 text-white">💬 Chat communautaire en ligne…</div>;
-const Connexion = () => <div className="p-10 text-white">🔐 Connexion sécurisée…</div>;
+
+const Connexion = ({ onLogin }) => (
+  <div className="p-10 text-white text-center">
+    <h2 className="text-2xl font-bold mb-4">🔐 Connexion</h2>
+    <p className="mb-6">Entrez dans votre interface sécurisée.</p>
+    <button
+      onClick={onLogin}
+      className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded"
+    >
+      Se connecter
+    </button>
+  </div>
+);
+
 const MonPersonnage = () => <div className="p-10 text-white">🧬 Affichage de votre avatar, classe, stats…</div>;
 
-const App = () => (
-  <Router>
-    <div className="bg-gray-900 min-h-screen">
-      <nav className="bg-black bg-opacity-70 text-white p-4 flex justify-around shadow-md">
-        <Link to="/">🏠 Accueil</Link>
-        <Link to="/blog">📘 Blog</Link>
-        <Link to="/boutique">🛒 Boutique</Link>
-        <Link to="/chat">💬 Chat</Link>
-        <Link to="/connexion">🔐 Connexion</Link>
-        <Link to="/mon-personnage">🧬 Mon Personnage</Link>
-      </nav>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/boutique" element={<Boutique />} />
-        <Route path="/chat" element={<Chat />} />
-        <Route path="/connexion" element={<Connexion />} />
-        <Route path="/mon-personnage" element={<MonPersonnage />} />
-      </Routes>
-    </div>
-  </Router>
-);
+const App = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  const handleLogin = () => {
+    setIsLoggedIn(true);
+  };
+
+  return (
+    <Router>
+      <div className="bg-gray-900 min-h-screen">
+        <nav className="bg-black bg-opacity-70 text-white p-4 flex justify-around shadow-md">
+          <Link to="/">🏠 Accueil</Link>
+          <Link to="/blog">📘 Blog</Link>
+          <Link to="/boutique">🛒 Boutique</Link>
+          <Link to="/chat">💬 Chat</Link>
+          <Link to="/connexion">🔐 Connexion</Link>
+          {isLoggedIn && <Link to="/mon-personnage">🧬 Mon Personnage</Link>}
+        </nav>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/boutique" element={<Boutique />} />
+          <Route path="/chat" element={<Chat />} />
+          <Route path="/connexion" element={<Connexion onLogin={handleLogin} />} />
+          <Route path="/mon-personnage" element={isLoggedIn ? <MonPersonnage /> : <Navigate to="/connexion" replace />} />
+        </Routes>
+      </div>
+    </Router>
+  );
+};
 
 export default App;
