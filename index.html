@@ -1,80 +1,120 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ÉCLIPSE ONLINE™</title>
+  <title>ÉCLIPSE ONLINE™ - Portail IA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      padding: 0;
       font-family: 'Orbitron', sans-serif;
-      color: #ffffff;
       background: url('https://images.unsplash.com/photo-1556817411-31ae72fa3ea0?auto=format&fit=crop&w=2100&q=80') no-repeat center center fixed;
       background-size: cover;
-      backdrop-filter: blur(4px);
+      color: #00f0ff;
     }
 
     .overlay {
-      background: rgba(0, 0, 20, 0.6);
       position: absolute;
       top: 0; left: 0;
       width: 100%; height: 100%;
+      background: rgba(0,0,30,0.7);
       z-index: -1;
     }
 
     .container {
       text-align: center;
-      padding: 4rem;
-      z-index: 1;
-      position: relative;
+      padding: 3rem;
     }
 
     h1 {
       font-size: 3rem;
-      color: #00ccff;
-      text-shadow: 0 0 8px #00f2ff;
+      text-shadow: 0 0 12px #00f2ff;
     }
 
-    a.button {
-      background-color: #00ccff;
+    .button {
+      background-color: #00f2ff;
       color: #000;
+      border: none;
       padding: 1rem 2rem;
       margin: 1rem;
-      text-decoration: none;
-      border-radius: 12px;
       font-weight: bold;
-      transition: background 0.3s;
+      text-decoration: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+      display: inline-block;
     }
 
-    a.button:hover {
-      background-color: #00f2ff;
+    .button:hover {
+      background-color: #01ffff;
     }
 
-    .footer {
+    .section {
       margin-top: 4rem;
-      font-size: 0.9rem;
-      opacity: 0.8;
+      padding: 2rem;
+      background-color: rgba(0,0,40,0.4);
+      border-radius: 10px;
+    }
+
+    #hall-beta {
+      display: none;
+    }
+
+    footer {
+      margin-top: 4rem;
+      font-size: 0.8rem;
+      opacity: 0.7;
     }
   </style>
 </head>
+
 <body>
   <div class="overlay"></div>
   <div class="container">
-    <h1>Bienvenue sur ÉCLIPSE ONLINE™</h1>
-    <p><strong>Statut :</strong> Pré-Alpha • Alpha en préparation</p>
+    <h1>ÉCLIPSE ONLINE™</h1>
+    <p><strong>Status actuel :</strong> Pré-alpha • Alpha prévue : <span id="alpha-date">12 juillet 2025</span></p>
 
-    <a class="button" href="#">Télécharger pour PC</a>
-    <a class="button" href="#">Télécharger Console</a>
-    <a class="button" href="#">Télécharger Mobile</a>
-    <a class="button" href="#">Télécharger VR</a>
-
-    <br/><br/>
-    <a class="button" href="https://www.facebook.com/profile.php?id=61577077756912&locale=fr_CA" target="_blank">Notre page Facebook</a>
-
-    <div class="footer">
-      ⓒ 2025 Éclipse Online™ • Copyright n°00095301-1 • Tous droits réservés.
+    <!-- TELECHARGEMENT -->
+    <div class="section">
+      <h2>Téléchargements</h2>
+      <a class="button" href="#">PC</a>
+      <a class="button" href="#">Console</a>
+      <a class="button" href="#">Mobile</a>
+      <a class="button" href="#">VR</a>
     </div>
+
+    <!-- IA SEYRA™ -->
+    <div class="section">
+      <h2>Interface IA : SEYRA™</h2>
+      <p><em>Module IA adaptatif en ligne...</em></p>
+      <p>[🔊 Résumé hebdomadaire vocal automatique | 🧠 Traduction IA activée | 📡 Événements synchronisés]</p>
+    </div>
+
+    <!-- STATS JOUEUR -->
+    <div class="section">
+      <h2>Espace Joueur</h2>
+      <p><strong>Connexion requise</strong> pour voir : Avatar, Classe, Niveau, Stats</p>
+    </div>
+
+    <!-- HALL BETA -->
+    <div id="hall-beta" class="section">
+      <h2>Hall des Bêta-Testeurs</h2>
+      <p>Merci à tous les testeurs de la version Bêta officielle d'Éclipse Online™</p>
+    </div>
+
+    <!-- LIEN FACEBOOK -->
+    <div class="section">
+      <h2>Réseaux</h2>
+      <a class="button" href="https://www.facebook.com/profile.php?id=61577077756912&locale=fr_CA" target="_blank">Page Facebook</a>
+    </div>
+
+    <footer>
+      ⓒ 2025 Éclipse Online™ | Certificat #00095301-1 | Tous droits réservés.
+    </footer>
   </div>
-</body>
-</html>
+
+  <script>
+    // Afficher automatiquement le Hall Bêta à partir de la date finale
+    const releaseDate = new Date("2025-12-01");
+    if (new Date() >= rele
