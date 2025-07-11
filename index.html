@@ -30,24 +30,16 @@
     .fade-in {
       animation: fadeInSmooth 1.2s ease-out both;
     }
-    /* Pour le logo centré */
-    .logo-container img {
-      max-width: 300px;
-      width: 90vw;
-      margin-bottom: 1.5rem;
-      filter: drop-shadow(0 0 40px #00d0ffb0);
+    a {
+      transition: color 0.2s;
     }
-    @media (max-width: 600px) {
-      .logo-container img { max-width: 90vw; }
+    a:hover {
+      color: #fff !important;
     }
   </style>
 </head>
 <body>
   <div class="bg-overlay fade-in">
-    <!-- Logo en haut de la page (tu peux mettre à jour le chemin selon l’image que tu veux afficher) -->
-    <div class="logo-container">
-      <img src="https://raw.githubusercontent.com/eclipseonlinemmorpg/eclipse-online-site/main/c628c218-90c5-4e5e-ab0e-98abfb226d67.png" alt="Logo Eclipse Online">
-    </div>
     <h1 class="text-4xl md:text-5xl font-bold text-blue-300 drop-shadow-lg mb-6">Bienvenue sur ÉCLIPSE ONLINE™</h1>
     <p class="mt-2 text-white max-w-xl mx-auto text-lg md:text-xl drop-shadow">
       Un monde connecté en temps réel, dirigé par VALKRAIN™ et l’IA SEYRA™.<br>
@@ -59,8 +51,7 @@
       </a>
     </div>
     <footer class="mt-10 text-sm text-white opacity-80">
-      © 2025 ÉCLIPSE ONLINE™ — Certificat #00095301-1 — Tous droits réservés.<br>
-      Site officiel propulsé par <b>BlackNova Industries</b>
+      © 2025 BlackNova Industries inc. — Tous droits réservés.
     </footer>
   </div>
 </body>
