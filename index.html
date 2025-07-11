@@ -10,73 +10,90 @@
       background: url('https://raw.githubusercontent.com/eclipseonlinemmorpg/eclipse-online-site/main/c628c218-90c5-4e5e-ab0e-98abfb226d67.png') center center / cover no-repeat fixed;
       background-size: cover;
       font-family: Arial, sans-serif;
+      color: #ffffff;
       margin: 0;
       padding: 0;
     }
+
     .bg-overlay {
-      background-color: rgba(0, 0, 0, 0.80);
+      background-color: rgba(0, 0, 0, 0.5);
       min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      text-align: center;
       padding: 2rem;
+      text-align: center;
+      backdrop-filter: blur(3px);
     }
-    @keyframes fadeInSmooth {
-      from { opacity: 0; transform: translateY(40px); }
-      to { opacity: 1; transform: translateY(0); }
+
+    .description {
+      background-color: rgba(0, 0, 0, 0.6);
+      max-width: 850px;
+      padding: 1.5rem;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+      margin-top: 1.5rem;
     }
-    .fade-in {
-      animation: fadeInSmooth 1.2s ease-out both;
+
+    h1, h2 {
+      text-shadow: 1px 2px 6px rgba(0, 0, 0, 0.8);
     }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 0.8rem;
+    }
+
     a {
+      color: #00cfff;
       transition: color 0.2s;
     }
+
     a:hover {
-      color: #fff !important;
+      color: #ffffff;
     }
-    section {
-      margin-bottom: 1.5rem;
+
+    footer {
+      margin-top: 1.5rem;
+      font-size: 0.9rem;
+      opacity: 0.8;
     }
   </style>
 </head>
+
 <body>
-  <div class="bg-overlay fade-in">
-    <h1 class="text-4xl md:text-5xl font-bold text-blue-300 drop-shadow-lg mb-6">Bienvenue sur ÉCLIPSE ONLINE™</h1>
-    <p class="mt-2 text-white max-w-xl mx-auto text-lg md:text-xl drop-shadow">
-      Un monde connecté en temps réel, dirigé par VALKRAIN™ et l’IA SEYRA™.<br>
+  <div class="bg-overlay">
+    <h1 class="text-4xl font-bold text-blue-300">Bienvenue sur ÉCLIPSE ONLINE™</h1>
+    <p class="mt-4 text-xl">
+      Un monde connecté en temps réel, dirigé par <strong>VALKRAIN™</strong> et l’IA <strong>SEYRA™</strong>.<br>
       Disponible sur toutes les plateformes.
     </p>
-    
-    <!-- SECTION DESCRIPTION DE L'UNIVERS -->
-    <section class="mt-10 max-w-2xl mx-auto bg-black bg-opacity-50 p-6 rounded-xl shadow-lg text-white text-left">
-      <h2 class="text-2xl font-bold mb-4 text-blue-200">Présentation de l’univers d’Éclipse Online</h2>
-      <p class="mb-2">
-        <strong>Éclipse Online</strong> vous plonge dans un monde unique mêlant magie, technologie et civilisations oubliées. 
-        Vivez une aventure épique dans un univers en perpétuelle évolution, où chaque choix influence le destin collectif des joueurs.
-      </p>
-      <p class="mb-2">
-        L’univers d’Éclipse Online est composé de continents mystérieux, de royaumes anciens, de cités futuristes et de zones sauvages remplies de secrets à découvrir. 
-        Les joueurs peuvent explorer librement, forger des alliances, commercer, combattre des créatures légendaires ou encore relever des défis stratégiques en solo ou en équipe.
-      </p>
-      <p class="mb-2">
-        L’histoire principale s’articule autour d’une ancienne prophétie : le retour d’une force cosmique qui menace l’équilibre du monde. 
-        Grâce à un système de factions dynamiques, une intelligence artificielle évolutive (SEYRA™) et des événements en temps réel, 
-        chaque aventure devient unique, offrant une immersion totale et une grande liberté de progression.
+
+    <section class="description">
+      <h2 class="text-2xl font-bold mb-4 text-blue-200">Présentation de l'univers d'Éclipse Online</h2>
+      <p>
+        <strong>Éclipse Online</strong> vous invite à explorer un monde inédit où se côtoient magie ancestrale, technologies futuristes et secrets oubliés. Cet univers dynamique et immersif évolue constamment grâce à vos choix et interactions avec une communauté active et passionnée.
       </p>
       <p>
-        Que vous soyez explorateur, stratège, bâtisseur ou combattant, <strong>Éclipse Online</strong> vous invite à écrire votre propre légende, 
-        dans un monde vivant et réactif où chaque action compte.
+        Parcourez des territoires immenses où cohabitent royaumes mythiques, métropoles technologiques et terres sauvages inexplorées. Que ce soit en solitaire ou en coopération, découvrez des créatures extraordinaires, participez à des batailles épiques, ou développez votre stratégie et commercez avec d'autres joueurs pour enrichir votre histoire personnelle.
+      </p>
+      <p>
+        Au cœur d’Éclipse Online repose une mystérieuse prophétie annonçant le retour d'une entité ancestrale, capable de bouleverser l'équilibre fragile du monde. Chaque action compte, influençant non seulement votre destinée mais également celle de tous les joueurs. Les systèmes de factions dynamiques et l'intelligence artificielle évolutive <strong>SEYRA™</strong> assurent des expériences uniques et toujours renouvelées.
+      </p>
+      <p>
+        Cependant, méfiez-vous : tout n'est pas ce qu'il semble être dans cet univers. De nombreux secrets demeurent cachés, attendant patiemment d'être découverts par les plus audacieux. Oserez-vous franchir les limites connues pour percer les mystères des différentes facettes du monde, notamment les énigmatiques paliers de la mort et les secrets bien gardés du scénario ? Votre aventure ne fait que commencer.
       </p>
     </section>
-    
-    <div class="mt-8">
-      <a href="https://www.facebook.com/profile.php?id=61577077756912&locale=fr_CA" target="_blank" class="text-blue-400 underline hover:text-white text-lg">
+
+    <div class="mt-6">
+      <a href="https://www.facebook.com/profile.php?id=61577077756912&locale=fr_CA" target="_blank" class="underline">
         🌐 Page Facebook Officielle
       </a>
     </div>
-    <footer class="mt-10 text-sm text-white opacity-80">
+
+    <footer>
       © 2025 BlackNova Industries inc. — Tous droits réservés.
     </footer>
   </div>
