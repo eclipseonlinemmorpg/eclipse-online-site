@@ -1,32 +1,32 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <title>ÉCLIPSE ONLINE™ - Chargement</title>
+  <meta http-equiv="refresh" content="4;url=index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chargement - ÉCLIPSE ONLINE™</title>
   <style>
     html, body {
       margin: 0;
       padding: 0;
       height: 100%;
-      font-family: Arial, sans-serif;
       background: url('background.png') no-repeat center center fixed;
       background-size: cover;
+      font-family: Arial, sans-serif;
+      color: white;
       display: flex;
       justify-content: center;
       align-items: center;
-      color: white;
       text-align: center;
     }
-    .overlay {
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 40px;
-      border-radius: 10px;
+    .preloader-text {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      border-radius: 12px;
     }
     h1 {
-      margin: 0 0 15px;
       font-size: 2em;
+      margin: 0 0 10px 0;
     }
     p {
       margin: 0;
@@ -35,18 +35,9 @@
   </style>
 </head>
 <body>
-  <div class="overlay">
+  <div class="preloader-text">
     <h1>Bienvenue sur ÉCLIPSE ONLINE™</h1>
     <p>Création de BlackNova Industries inc.</p>
   </div>
-  <script>
-    setTimeout(() => {
-      const lang = navigator.language || navigator.userLanguage;
-      const langCode = lang.substring(0, 2).toLowerCase();
-      const supported = ['fr', 'en', 'es', 'de', 'pt', 'ru', 'zh', 'ar', 'hi'];
-      const target = supported.includes(langCode) ? `index_${langCode}.html` : 'index_en.html';
-      window.location.href = target;
-    }, 4000);
-  </script>
 </body>
 </html>
