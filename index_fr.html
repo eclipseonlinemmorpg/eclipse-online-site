@@ -1,47 +1,51 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>ÉCLIPSE ONLINE™</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-image: url('background_eclipse.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            font-family: Arial, sans-serif;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            text-align: center;
-        }
-        .overlay {
-            background: rgba(0, 0, 0, 0.6);
-            padding: 30px;
-            border-radius: 15px;
-            max-width: 800px;
-        }
-        h1 {
-            font-size: 2em;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Préchargement - ÉCLIPSE ONLINE™</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      background: url('background.png') no-repeat center center fixed;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+    }
+    .loader-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+    .loader-text {
+      color: white;
+      text-align: center;
+      padding: 20px;
+      border-radius: 10px;
+      font-size: 1.5rem;
+    }
+    .loader-text strong {
+      font-size: 1.8rem;
+    }
+  </style>
 </head>
 <body>
-    <div class="overlay">
-        <h1>Bienvenue sur ÉCLIPSE ONLINE™</h1>
-        <p>Création de BlackNova Industries inc.</p>
-        <p>
-        Éclipse Online™ est une expérience MMORPG de nouvelle génération, immersive et multiverselle, 
-        couvrant plusieurs mondes. Des combats PVP/PVE intenses à la résolution d’énigmes, 
-        en passant par le commerce interdimensionnel et les mondes adultes, 
-        Éclipse Online rassemble exploration, stratégie et communauté dans un univers sans limites.
-        </p>
+  <div class="loader-container">
+    <div class="loader-text">
+      <strong>Bienvenue sur ÉCLIPSE ONLINE™</strong><br>
+      Création de BlackNova Industries inc.
     </div>
+  </div>
+
+  <script>
+    setTimeout(function() {
+      window.location.href = "accueil.html";
+    }, 5000); // Redirige après 5 secondes
+  </script>
 </body>
 </html>
