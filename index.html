@@ -2,51 +2,47 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="5;url=index_fr.html">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chargement - Éclipse Online</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background: url('logo_blacknova.png') no-repeat center center fixed;
-            background-size: cover;
-            font-family: 'Segoe UI', sans-serif;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
-        }
-        .content {
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 2em;
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
-        }
-        h1, h2, p {
-            margin: 0.5em 0;
-        }
-        h1 {
-            font-size: 2em;
-        }
-        h2 {
-            font-size: 1.2em;
-            font-weight: normal;
-        }
-        p {
-            font-size: 0.9em;
-            opacity: 0.8;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chargement | ÉCLIPSE ONLINE</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('bg_eclipse.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+    .loader-text {
+      text-align: center;
+      font-size: 1.5em;
+      font-weight: bold;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px 30px;
+      border-radius: 12px;
+    }
+    .sub {
+      font-size: 0.9em;
+      margin-top: 0.6em;
+      font-weight: normal;
+    }
+  </style>
 </head>
 <body>
-    <div class="content">
-        <h1>Bienvenue sur ÉCLIPSE ONLINE™</h1>
-        <h2>Création de BlackNova Industries inc.</h2>
-        <p>Multilingual content is ready...</p>
-    </div>
+  <div class="loader-text">
+    Bienvenue sur ÉCLIPSE ONLINE™
+    <div class="sub">Création de BlackNova Industries inc.</div>
+  </div>
+  <script>
+    setTimeout(function(){
+      window.location.href = "index_fr.html";
+    }, 3000);
+  </script>
 </body>
 </html>
