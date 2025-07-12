@@ -1,49 +1,47 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Préchargement - ÉCLIPSE ONLINE</title>
-    <style>
-        html, body {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            overflow: hidden;
-            font-family: Arial, sans-serif;
-        }
-
-        body {
-            background: url('logo_blacknova.png') no-repeat center center fixed;
-            background-size: cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-align: center;
-        }
-
-        .preloader-text {
-            background-color: rgba(0, 0, 0, 0.6);
-            padding: 30px;
-            border-radius: 12px;
-        }
-
-        h1 {
-            margin: 0 0 10px 0;
-            font-size: 26px;
-        }
-
-        p {
-            margin: 0;
-            font-size: 16px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chargement - ÉCLIPSE ONLINE</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: url('logo_blacknova.png') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .overlay {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 30px 60px;
+      border-radius: 15px;
+      text-align: center;
+    }
+    h1 {
+      margin: 0 0 15px;
+      font-size: 26px;
+    }
+    p {
+      margin: 0;
+      font-size: 16px;
+    }
+  </style>
+  <script>
+    setTimeout(function () {
+      window.location.href = "index_fr.html"; // <-- modifie ici le nom de la page cible si besoin
+    }, 4000); // 4000ms = 4 secondes
+  </script>
 </head>
 <body>
-    <div class="preloader-text">
-        <h1>Bienvenue sur ÉCLIPSE ONLINE™</h1>
-        <p>Création de BlackNova Industries inc.</p>
-    </div>
+  <div class="overlay">
+    <h1>Bienvenue sur ÉCLIPSE ONLINE™</h1>
+    <p>Création de BlackNova Industries inc.</p>
+  </div>
 </body>
 </html>
