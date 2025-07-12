@@ -47,3 +47,13 @@
     </div>
 </body>
 </html>
+
+<script>
+  setTimeout(() => {
+    const lang = navigator.language || navigator.userLanguage;
+    const langCode = lang.substring(0, 2).toLowerCase();
+    const supported = ['fr', 'en', 'es', 'de', 'pt', 'ru', 'zh', 'ar', 'hi'];
+    const target = supported.includes(langCode) ? `index_${langCode}.html` : 'index_en.html';
+    window.location.href = target;
+  }, 4000); // délai après pré-loader
+</script>
