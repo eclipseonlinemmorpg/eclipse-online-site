@@ -44,9 +44,43 @@
       font-size: 0.9rem;
       opacity: 0.8;
     }
+    /* Loader CSS */
+    #loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 9999;
+      width: 100vw;
+      height: 100vh;
+      background-color: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.5s ease, visibility 0.5s ease;
+    }
+    #loader.fade-out {
+      opacity: 0;
+      visibility: hidden;
+    }
+    .loader-circle {
+      width: 120px;
+      height: 120px;
+      border: 6px solid #00cfff;
+      border-top: 6px solid transparent;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
   </style>
 </head>
 <body>
+  <!-- Loader -->
+  <div id="loader">
+    <div class="loader-circle"></div>
+  </div>
+
   <div class="bg-overlay">
     <h1 class="text-4xl font-bold text-blue-300">Bienvenue sur ÉCLIPSE ONLINE™</h1>
     <p class="mt-4 text-xl">
@@ -65,5 +99,13 @@
     </div>
     <footer>© 2025 BlackNova Industries inc. — Tous droits réservés.</footer>
   </div>
+
+  <!-- Script pour le loader -->
+  <script>
+    window.addEventListener('load', () => {
+      const loader = document.getElementById('loader');
+      loader.classList.add('fade-out');
+    });
+  </script>
 </body>
 </html>
