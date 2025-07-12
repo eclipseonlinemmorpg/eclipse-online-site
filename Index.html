@@ -1,0 +1,10 @@
+<script>
+  const lang = navigator.language || navigator.userLanguage;
+  const supportedLangs = ['fr', 'en', 'de', 'es', 'pt', 'ru', 'zh', 'ja', 'hi', 'ar'];
+  const base = window.location.origin;
+
+  const targetLang = lang.substring(0, 2);
+  if (supportedLangs.includes(targetLang) && targetLang !== 'fr') {
+    window.location.href = `${base}/index_${targetLang}.html`;
+  }
+</script>
