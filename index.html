@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Éclipse Online</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url("c628c218-90c5-4e5e-ab0e-98abfb226d67.png") no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    .container {
+      background-color: rgba(0, 0, 0, 0.65);
+      padding: 40px;
+      margin: 100px auto;
+      width: 90%;
+      max-width: 800px;
+      border-radius: 15px;
+    }
+    h1 {
+      font-size: 2em;
+    }
+    a {
+      color: #4cc3ff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+  <script>
+    const lang = navigator.language || navigator.userLanguage;
+    const supportedLangs = ['fr', 'en', 'de', 'es', 'pt', 'ru', 'zh', 'ja', 'hi', 'ar'];
+    const base = window.location.origin;
+
+    const targetLang = lang.substring(0, 2);
+    if (supportedLangs.includes(targetLang) && targetLang !== 'fr') {
+      window.location.href = `${base}/index_${targetLang}.html`;
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Bienvenue sur ÉCLIPSE ONLINE™</h1>
+    <p>Un monde connecté en temps réel, dirigé par <strong>VALKRAIN™</strong> et l’IA <strong>LYNARIA™</strong>.<br>Disponible sur toutes les plateformes.</p>
+
+    <h2>Présentation de l'univers d'Éclipse Online</h2>
+    <p><strong>Éclipse Online</strong> vous invite à explorer un monde inédit où se côtoient magie ancestrale, technologies futuristes et secrets oubliés. Cet univers dynamique et immersif évolue constamment grâce à vos choix et interactions avec une communauté active et passionnée.</p>
+    <p>Parcourez des territoires immenses où cohabitent royaumes mythiques, métropoles technologiques et terres sauvages inexplorées. Que ce soit en solitaire ou en coopération, découvrez des créatures extraordinaires, participez à des batailles épiques, ou développez votre stratégie et commencez avec d’autres joueurs pour enrichir votre histoire personnelle.</p>
+    <p>Au cœur d’Éclipse Online repose une mystérieuse prophétie annonçant le retour d’une entité ancestrale, capable de bouleverser l’équilibre fragile du monde. Chaque action compte, influençant votre destinée ainsi que celle de tous les joueurs. Les systèmes de factions dynamiques et l’intelligence artificielle évolutive <strong>LYNARIA™</strong> assurent des expériences uniques et toujours renouvelées.</p>
+    <p>Cependant, méfiez-vous : tout n’est pas ce qu’il semble être dans cet univers. De nombreux secrets demeurent cachés, attendant patiemment d’être découverts par les plus audacieux. Osez-vous percer les mystères des différentes facettes du monde, notamment les paliers de la mort et les secrets bien gardés du scénario ? Votre aventure ne fait que commencer.</p>
+
+    <p><a href="https://www.facebook.com/">🌐 Page Facebook Officielle</a></p>
+    <p>© 2025 BlackNova Industries inc. — Tous droits réservés.</p>
+  </div>
+</body>
+</html>
