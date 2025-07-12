@@ -2,35 +2,43 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Chargement...</title>
-    <meta http-equiv="refresh" content="3;url=index_fr.html">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: black;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            color: white;
-            font-family: 'Segoe UI', sans-serif;
-            text-align: center;
-        }
-        img {
-            max-width: 300px;
-            margin-bottom: 20px;
-        }
-        .text {
-            font-size: 1.2rem;
-            margin-top: 10px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bienvenue sur ÉCLIPSE ONLINE™</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      background-image: url('Logo Entreprise.png');
+      background-size: cover;
+      background-position: center;
+      font-family: Arial, sans-serif;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      flex-direction: column;
+    }
+    .loader-text {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px 40px;
+      border-radius: 8px;
+    }
+  </style>
+  <script>
+    setTimeout(() => {
+      window.location.href = "index_fr.html";
+    }, 3000);
+  </script>
 </head>
 <body>
-    <img src="logo_blacknova.png" alt="BlackNova Industries Logo">
-    <div class="text">Une création originale de BlackNova Industries inc.<br>Chargement du portail ÉCLIPSE ONLINE™...</div>
+  <div class="loader-text">
+    <h1>Bienvenue sur ÉCLIPSE ONLINE™</h1>
+    <p>Création de BlackNova Industries inc.</p>
+    <p>Multilingual content is ready...</p>
+  </div>
 </body>
 </html>
