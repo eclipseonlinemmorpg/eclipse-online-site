@@ -1,36 +1,36 @@
+
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Redirection linguistique | ÉCLIPSE ONLINE</title>
-    <meta http-equiv="refresh" content="0;url=index_fr.html" />
-    <script>
-      const supportedLangs = ['en', 'fr', 'es', 'de', 'pt', 'zh', 'ru', 'ja', 'hi', 'ar'];
-      const userLang = navigator.language || navigator.userLanguage;
-      const langCode = userLang.split('-')[0];
-
-      if (supportedLangs.includes(langCode)) {
-        window.location.replace(`index_${langCode}.html`);
-      } else {
-        window.location.replace('index_fr.html');
-      }
-    </script>
+<head>
+    <meta charset="UTF-8">
+    <title>Chargement...</title>
+    <meta http-equiv="refresh" content="3;url=index_fr.html">
     <style>
-      body {
-        background-color: #000;
-        color: #aaa;
-        font-family: sans-serif;
-        text-align: center;
-        margin-top: 20%;
-      }
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+            font-family: 'Segoe UI', sans-serif;
+            text-align: center;
+        }
+        img {
+            max-width: 300px;
+            margin-bottom: 20px;
+        }
+        .text {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
     </style>
-  </head>
-  <body>
-    <noscript>
-      Si vous n’êtes pas redirigé automatiquement, cliquez ici :
-      <a href="index_fr.html">Accéder à la version française</a>
-    </noscript>
-    <p>Chargement…</p>
-  </body>
+</head>
+<body>
+    <img src="logo_blacknova.png" alt="BlackNova Industries Logo">
+    <div class="text">Une création originale de BlackNova Industries inc.<br>Chargement du portail ÉCLIPSE ONLINE™...</div>
+</body>
 </html>
