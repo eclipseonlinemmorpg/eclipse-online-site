@@ -2,48 +2,16 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Chargement - ÉCLIPSE ONLINE™</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: url('logo_blacknova.png') no-repeat center center fixed;
-      background-size: cover;
-      font-family: Arial, sans-serif;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      text-align: center;
-    }
-    .text-wrapper {
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 1rem 2rem;
-      border-radius: 8px;
-    }
-    h1 {
-      margin-bottom: 0.5rem;
-    }
-    p {
-      margin-top: 0.25rem;
-      font-size: 0.9rem;
-      color: #ccc;
-    }
-  </style>
-  <script>
-    setTimeout(() => {
-      window.location.href = 'index_fr.html';
-    }, 3000);
-  </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chargement - ÉCLIPSE ONLINE</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/loader.js" defer></script>
 </head>
-<body>
-  <div class="text-wrapper">
-    <h1>Bienvenue sur ÉCLIPSE ONLINE™</h1>
-    <p>Création de BlackNova Industries inc.</p>
-  </div>
+<body class="preload">
+    <div id="preloader">
+        <img src="img/logo_blacknova.png" alt="BlackNova Industries" class="logo" />
+        <p class="loading-text">Chargement...</p>
+    </div>
 </body>
 </html>
