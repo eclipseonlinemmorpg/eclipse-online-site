@@ -1,51 +1,28 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ÉCLIPSE ONLINE™ - Chargement</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body, html {
-      height: 100%;
-      width: 100%;
-      overflow: hidden;
-      background-color: #000;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    #preloader {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      background-color: #000;
-      background-image: url('logo_blacknova.png');
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain;
-      animation: fadeOut 2s ease 3s forwards;
-    }
-    @keyframes fadeOut {
-      to {
-        opacity: 0;
-        visibility: hidden;
-      }
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Chargement - ÉCLIPSE ONLINE™</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            background: black;
+            background-image: url('logo_blacknova.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+        }
+    </style>
+    <script>
+        setTimeout(() => {
+            window.location.href = "index_fr.html";
+        }, 4000);
+    </script>
 </head>
-<body>
-  <div id="preloader"></div>
-  <script>
-    setTimeout(() => {
-      window.location.href = "index_fr.html";
-    }, 4000);
-  </script>
-</body>
+<body></body>
 </html>
