@@ -2,16 +2,41 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
     <title>Chargement - ÉCLIPSE ONLINE</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <script src="js/loader.js" defer></script>
+    <style>
+        body {
+            margin: 0;
+            background-color: #000;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+        }
+        .preloader {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .preloader img {
+            width: 200px;
+            margin-bottom: 20px;
+        }
+        .preloader p {
+            font-size: 1.2em;
+        }
+    </style>
 </head>
-<body class="preload">
-    <div id="preloader">
-        <img src="img/logo_blacknova.png" alt="BlackNova Industries" class="logo" />
-        <p class="loading-text">Chargement...</p>
+<body>
+    <div class="preloader">
+        <img src="logo_blacknova.png" alt="Logo BlackNova Industries">
+        <p>Chargement en cours...</p>
     </div>
+    <script>
+        setTimeout(function() {
+            window.location.href = "index_fr.html";
+        }, 3000);
+    </script>
 </body>
 </html>
