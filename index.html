@@ -44,7 +44,6 @@
       font-size: 0.9rem;
       opacity: 0.8;
     }
-    /* Loader CSS */
     #loader {
       position: fixed;
       top: 0;
@@ -81,6 +80,23 @@
     <div class="loader-circle"></div>
   </div>
 
+  <!-- Menu Langue -->
+  <header class="fixed top-0 w-full bg-black bg-opacity-70 text-white flex justify-end items-center p-2 z-50">
+    <label for="language" class="mr-2 text-sm">🌐 Langue :</label>
+    <select id="language" class="bg-black text-white border border-gray-500 rounded px-2 py-1 text-sm" onchange="changeLanguage(this)">
+      <option value="fr">Français</option>
+      <option value="en">English</option>
+      <option value="es">Español</option>
+      <option value="de">Deutsch</option>
+      <option value="zh">中文</option>
+      <option value="ja">日本語</option>
+      <option value="ru">Русский</option>
+      <option value="ar">العربية</option>
+      <option value="pt">Português</option>
+      <option value="hi">हिन्दी</option>
+    </select>
+  </header>
+
   <div class="bg-overlay">
     <h1 class="text-4xl font-bold text-blue-300">Bienvenue sur ÉCLIPSE ONLINE™</h1>
     <p class="mt-4 text-xl">
@@ -100,12 +116,22 @@
     <footer>© 2025 BlackNova Industries inc. — Tous droits réservés.</footer>
   </div>
 
-  <!-- Script pour le loader -->
+  <!-- Scripts -->
   <script>
     window.addEventListener('load', () => {
       const loader = document.getElementById('loader');
       loader.classList.add('fade-out');
     });
+
+    function changeLanguage(select) {
+      const lang = select.value;
+      const supported = ['fr', 'en', 'es', 'de', 'zh', 'ja', 'ru', 'ar', 'pt', 'hi'];
+      if (supported.includes(lang)) {
+        window.location.href = `index_${lang}.html`;
+      } else {
+        alert("Langue non encore disponible.");
+      }
+    }
   </script>
 </body>
 </html>
