@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chargement - BlackNova</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+      color: #fff;
+    }
+    .preloader {
+      text-align: center;
+    }
+    .preloader img {
+      width: 180px;
+      animation: fadein 2s ease-in-out;
+    }
+    .preloader h1 {
+      margin-top: 20px;
+      font-size: 1.2rem;
+      font-weight: 300;
+      color: #ccc;
+      animation: fadein 2s ease-in-out;
+    }
+    @keyframes fadein {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+  <script>
+    setTimeout(() => {
+      window.location.href = "index_fr.html";
+    }, 4000);
+  </script>
+</head>
+<body>
+  <div class="preloader">
+    <img src="logo_blacknova.png" alt="Logo BlackNova">
+    <h1>Chargement en cours...</h1>
+  </div>
+</body>
+</html>
