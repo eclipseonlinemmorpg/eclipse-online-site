@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Préchargement – ÉCLIPSE ONLINE™</title>
   <style>
     html, body {
@@ -53,8 +53,8 @@
     setTimeout(() => {
       const lang = (navigator.language || navigator.userLanguage || 'en').slice(0, 2).toLowerCase();
       const supported = ['fr', 'en', 'es', 'de', 'pt', 'ru', 'zh', 'ar', 'hi', 'ja', 'ko'];
-      const fallback = 'index_en.html';
-      const destination = supported.includes(lang) ? `index_${lang}.html` : fallback;
+      const fallback = 'en.html'; // car tu as "en.html" (pas "index_en.html")
+      const destination = supported.includes(lang) ? `${lang}.html` : fallback;
       window.location.href = destination;
     }, 2000);
   </script>
