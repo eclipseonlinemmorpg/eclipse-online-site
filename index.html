@@ -10,12 +10,31 @@
     body {
       background: url('background.png') no-repeat center center fixed;
       background-size: cover;
+      background-color: #000;
       color: white;
     }
   </style>
 </head>
 <body class="min-h-screen flex flex-col items-center justify-center text-center px-4">
   <h1 class="text-4xl font-bold mb-6 drop-shadow-lg">Comparatif Marketing</h1>
+
+  <!-- Sélecteur de langue -->
+  <div class="mb-6">
+    <label for="lang-select" class="mr-2 font-semibold text-white">🌐 Langue :</label>
+    <select id="lang-select" class="bg-gray-800 text-white p-2 rounded" onchange="changeLanguage(this)">
+      <option disabled selected>Choisir...</option>
+      <option value="fr.html">Français</option>
+      <option value="en.html">English</option>
+      <option value="es.html">Español</option>
+      <option value="de.html">Deutsch</option>
+      <option value="pt.html">Português</option>
+      <option value="zh.html">中文</option>
+      <option value="ar.html">العربية</option>
+      <option value="ja.html">日本語</option>
+      <option value="ko.html">한국어</option>
+    </select>
+  </div>
+
   <div class="bg-purple-600 bg-opacity-80 p-6 rounded-xl max-w-3xl shadow-lg">
     <p class="text-xl font-semibold">
       Plus complet, plus intelligent, et plus léger que tous les autres. Entrez dans un univers sans limite.
@@ -26,12 +45,24 @@
     <a href="Comparatif_Eclipse_Online.pdf" target="_blank" class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded">
       📄 Voir le comparatif complet en PDF
     </a>
-    <div class="space-x-3 text-sm">
-      <a href="https://twitter.com/intent/tweet?text=Découvrez+le+jeu+le+plus+complet+:+Eclipse+Online&url=https://eclipseonline.io" class="text-blue-400 underline" target="_blank">Partager sur X</a>
-      <a href="https://www.facebook.com/sharer/sharer.php?u=https://eclipseonline.io" class="text-blue-400 underline" target="_blank">Partager sur Facebook</a>
-      <a href="https://www.instagram.com" class="text-pink-300 underline" target="_blank">Voir sur Instagram</a>
+    <div class="space-x-4 text-sm text-blue-300">
+      <a href="https://twitter.com/intent/tweet?text=Découvrez+Éclipse+Online+le+jeu+le+plus+complet+!&url=https://eclipseonline.io" target="_blank">Twitter/X</a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https://eclipseonline.io" target="_blank">Facebook</a>
+      <a href="https://www.instagram.com" target="_blank">Instagram</a>
+      <a href="https://www.youtube.com/@BlackNovaIndustries" target="_blank">YouTube</a>
+      <a href="https://www.tiktok.com/@BlackNovaIndustries" target="_blank">TikTok</a>
     </div>
   </div>
+
   <p class="mt-10 text-sm text-gray-300">© BlackNova Industries inc.</p>
+
+  <script>
+    function changeLanguage(select) {
+      const url = select.value;
+      if (url) {
+        window.location.href = url;
+      }
+    }
+  </script>
 </body>
 </html>
