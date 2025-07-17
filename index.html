@@ -1,68 +1,65 @@
-
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="index">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Comparatif Marketing</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <style>
-    body {
-      background: url('background.png') no-repeat center center fixed;
-      background-size: cover;
-      background-color: #000;
-      color: white;
-    }
-  </style>
+  
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+  }
+  .container {
+    text-align: center;
+    padding: 100px 20px;
+  }
+  .language-select, .links, .pdf-button {
+    margin: 20px 0;
+  }
+  .hero {
+    background-color: rgba(120, 40, 250, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-bottom: 30px;
+  }
+  .pdf-button a, .links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #fff;
+  }
+</style>
+
 </head>
-<body class="min-h-screen flex flex-col items-center justify-center text-center px-4">
-  <h1 class="text-4xl font-bold mb-6 drop-shadow-lg">Comparatif Marketing</h1>
-
-  <!-- Sélecteur de langue -->
-  <div class="mb-6">
-    <label for="lang-select" class="mr-2 font-semibold text-white">🌐 Langue :</label>
-    <select id="lang-select" class="bg-gray-800 text-white p-2 rounded" onchange="changeLanguage(this)">
-      <option disabled selected>Choisir...</option>
-      <option value="fr.html">Français</option>
-      <option value="en.html">English</option>
-      <option value="es.html">Español</option>
-      <option value="de.html">Deutsch</option>
-      <option value="pt.html">Português</option>
-      <option value="zh.html">中文</option>
-      <option value="ar.html">العربية</option>
-      <option value="ja.html">日本語</option>
-      <option value="ko.html">한국어</option>
-    </select>
-  </div>
-
-  <div class="bg-purple-600 bg-opacity-80 p-6 rounded-xl max-w-3xl shadow-lg">
-    <p class="text-xl font-semibold">
-      Plus complet, plus intelligent, et plus léger que tous les autres. Entrez dans un univers sans limite.
-    </p>
-  </div>
-
-  <div class="mt-6 space-y-4">
-    <a href="Comparatif_Eclipse_Online.pdf" target="_blank" class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded">
-      📄 Voir le comparatif complet en PDF
-    </a>
-    <div class="space-x-4 text-sm text-blue-300">
-      <a href="https://twitter.com/intent/tweet?text=Découvrez+Éclipse+Online+le+jeu+le+plus+complet+!&url=https://eclipseonline.io" target="_blank">Twitter/X</a>
-      <a href="https://www.facebook.com/sharer/sharer.php?u=https://eclipseonline.io" target="_blank">Facebook</a>
-      <a href="https://www.instagram.com" target="_blank">Instagram</a>
-      <a href="https://www.youtube.com/@BlackNovaIndustries" target="_blank">YouTube</a>
-      <a href="https://www.tiktok.com/@BlackNovaIndustries" target="_blank">TikTok</a>
+<body>
+  <div class="container">
+    <h1>Comparatif Marketing</h1>
+    <div class="language-select">
+      🌐 Langue :
+      <select onchange="location = this.value;">
+        <option value="index.html">INDEX</option><option value="fr.html">FR</option><option value="en.html">EN</option><option value="es.html">ES</option><option value="de.html">DE</option><option value="pt.html">PT</option><option value="ar.html">AR</option><option value="zh.html">ZH</option><option value="ja.html">JA</option><option value="ko.html">KO</option>
+      </select>
     </div>
+    <div class="hero">
+      <p>Plus complet, plus intelligent, et plus léger que tous les autres. Entrez dans un univers sans limite.</p>
+    </div>
+    <div class="pdf-button">
+      <a href="eclipse_comparatif.pdf"><button>📄 Voir le comparatif complet en PDF</button></a>
+    </div>
+    <div class="links">
+      <a href="https://www.instagram.com" target="_blank">Instagram</a>
+      <a href="https://www.youtube.com" target="_blank">YouTube</a>
+      <a href="https://www.tiktok.com" target="_blank">TikTok</a>
+      <a href="https://www.facebook.com" target="_blank">Facebook</a>
+    </div>
+    <p>© BlackNova Industries inc.</p>
   </div>
-
-  <p class="mt-10 text-sm text-gray-300">© BlackNova Industries inc.</p>
-
-  <script>
-    function changeLanguage(select) {
-      const url = select.value;
-      if (url) {
-        window.location.href = url;
-      }
-    }
-  </script>
 </body>
 </html>

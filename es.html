@@ -1,32 +1,65 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Comparación de Marketing – Éclipse Online™</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Comparatif Marketing</title>
+  
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+  }
+  .container {
+    text-align: center;
+    padding: 100px 20px;
+  }
+  .language-select, .links, .pdf-button {
+    margin: 20px 0;
+  }
+  .hero {
+    background-color: rgba(120, 40, 250, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-bottom: 30px;
+  }
+  .pdf-button a, .links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #fff;
+  }
+</style>
+
 </head>
-<body class="bg-gray-900 text-white">
-  <div class="max-w-7xl mx-auto px-4 py-12">
-    <div class="flex justify-end mb-6">
-      <select onchange="location = this.value" class="bg-gray-800 text-white p-2 rounded">
-        <option disabled selected>🌐 Language</option>
-        <option value="fr.html">Français</option>
-        <option value="en.html">English</option>
-        <option value="es.html">Español</option>
-        <option value="de.html">Deutsch</option>
-        <option value="ja.html">日本語</option>
-        <option value="pt.html">Português</option>
-        <option value="ar.html">العربية</option>
-        <option value="zh.html">中文</option>
-        <option value="ko.html">한국어</option>
+<body>
+  <div class="container">
+    <h1>Comparatif Marketing</h1>
+    <div class="language-select">
+      🌐 Langue :
+      <select onchange="location = this.value;">
+        <option value="index.html">INDEX</option><option value="fr.html">FR</option><option value="en.html">EN</option><option value="es.html">ES</option><option value="de.html">DE</option><option value="pt.html">PT</option><option value="ar.html">AR</option><option value="zh.html">ZH</option><option value="ja.html">JA</option><option value="ko.html">KO</option>
       </select>
     </div>
-    <h1 class="text-4xl font-bold mb-6 text-center">Comparación de Marketing – Éclipse Online™</h1>
-    <div class="bg-gradient-to-r from-indigo-500 to-purple-600 rounded-xl p-6 mb-8 text-center">
-      <p class="text-2xl font-semibold">Éclipse Online™: Más completo, más inteligente y más ligero que todos los demás. Entra en un universo sin límites.</p>
+    <div class="hero">
+      <p>Plus complet, plus intelligent, et plus léger que tous les autres. Entrez dans un univers sans limite.</p>
     </div>
-    <p class="text-center text-gray-400 text-sm">🌐 Comparación de Marketing – Éclipse Online™</p>
+    <div class="pdf-button">
+      <a href="eclipse_comparatif.pdf"><button>📄 Voir le comparatif complet en PDF</button></a>
+    </div>
+    <div class="links">
+      <a href="https://www.instagram.com" target="_blank">Instagram</a>
+      <a href="https://www.youtube.com" target="_blank">YouTube</a>
+      <a href="https://www.tiktok.com" target="_blank">TikTok</a>
+      <a href="https://www.facebook.com" target="_blank">Facebook</a>
+    </div>
+    <p>© BlackNova Industries inc.</p>
   </div>
 </body>
 </html>
