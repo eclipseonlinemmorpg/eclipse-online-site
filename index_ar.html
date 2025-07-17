@@ -6,19 +6,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Éclipse Online</title>
   <style>
-    body {
+    html, body {
+      height: 100%;
       margin: 0;
       font-family: Arial, sans-serif;
       background: url('background.jpg') no-repeat center center fixed;
       background-size: cover;
       color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     .overlay {
       background-color: rgba(0, 0, 0, 0.7);
       padding: 40px;
       border-radius: 15px;
       max-width: 800px;
-      margin: 100px auto;
+      text-align: center;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
     }
     .social a {
@@ -31,7 +35,7 @@
     }
     footer {
       text-align: center;
-      margin-top: 40px;
+      margin-top: 30px;
       font-size: 12px;
       color: #aaa;
     }
@@ -39,25 +43,23 @@
 </head>
 <body>
   <div class="overlay">
-    <h1 style="text-align:center;">Bienvenue sur ÉCLIPSE ONLINE™</h1>
-    <p style="text-align:center;">Le MMORPG le plus complet jamais créé, tous systèmes, tous mondes.</p>
-    <ul>
+    <h1>Bienvenue sur ÉCLIPSE ONLINE™</h1>
+    <p>Le MMORPG le plus complet jamais créé, tous systèmes, tous mondes.</p>
+    <ul style="text-align: left; display: inline-block; text-align: left;">
       <li>✅ Plus de 20 mondes explorables</li>
       <li>✅ Compatible PC, mobile, console et cloud</li>
       <li>✅ Races jouables, classes évolutives, métiers, artisanat</li>
       <li>✅ IA adaptative + événements dynamiques</li>
       <li>✅ Plus léger que les AAA (26 Go VS 125 Go pour Destiny 2)</li>
     </ul>
-    <p style="text-align:center;">
-      <a href="Comparatif_Eclipse_Online.pdf" style="color:lightblue;">📄 Voir le PDF marketing</a>
-    </p>
-    <div class="social" style="text-align:center;">
+    <p><a href="Comparatif_Eclipse_Online.pdf" style="color:lightblue;">📄 Voir le PDF marketing</a></p>
+    <div class="social">
       <a href="#">📷 Instagram</a>
       <a href="#">🟦 Facebook</a>
       <a href="#">🎵 TikTok</a>
       <a href="#">▶️ YouTube</a>
     </div>
-    <div class="lang" style="text-align:center;">
+    <div class="lang">
       🌐 Langue :
       <select onchange="location = this.value;">
         <option value="index_fr.html" >Français</option>
@@ -71,7 +73,7 @@
 <option value="index_ar.html" selected>العربية</option>
       </select>
     </div>
+    <footer>© BlackNova Industries inc. — Tous droits réservés</footer>
   </div>
-  <footer>© BlackNova Industries inc. — Tous droits réservés</footer>
 </body>
 </html>
