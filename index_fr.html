@@ -2,78 +2,55 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Éclipse Online</title>
+  <meta charset="UTF-8" />
+  <title>ÉCLIPSE ONLINE™ - Accueil</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: url('background.jpg') no-repeat center center fixed;
+    body {
+      background: url('background.png') no-repeat center center fixed;
       background-size: cover;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      font-family: Arial, sans-serif;
     }
-    .overlay {
+    .bg-overlay {
       background-color: rgba(0, 0, 0, 0.7);
-      padding: 40px;
-      border-radius: 15px;
-      max-width: 800px;
-      text-align: center;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
-    }
-    .social a {
-      margin: 0 10px;
-      color: #ccc;
-      text-decoration: none;
-    }
-    .lang {
-      margin-top: 20px;
-    }
-    footer {
-      text-align: center;
-      margin-top: 30px;
-      font-size: 12px;
-      color: #aaa;
     }
   </style>
 </head>
-<body>
-  <div class="overlay">
-    <h1>Bienvenue sur ÉCLIPSE ONLINE™</h1>
-    <p>Le MMORPG le plus complet jamais créé, tous systèmes, tous mondes.</p>
-    <ul style="text-align: left; display: inline-block; text-align: left;">
-      <li>✅ Plus de 20 mondes explorables</li>
-      <li>✅ Compatible PC, mobile, console et cloud</li>
-      <li>✅ Races jouables, classes évolutives, métiers, artisanat</li>
-      <li>✅ IA adaptative + événements dynamiques</li>
-      <li>✅ Plus léger que les AAA (26 Go VS 125 Go pour Destiny 2)</li>
-    </ul>
-    <p><a href="Comparatif_Eclipse_Online.pdf" style="color:lightblue;">📄 Voir le PDF marketing</a></p>
-    <div class="social">
-      <a href="#">📷 Instagram</a>
-      <a href="#">🟦 Facebook</a>
-      <a href="#">🎵 TikTok</a>
-      <a href="#">▶️ YouTube</a>
+<body class="text-white">
+  <div class="flex flex-col items-center justify-center min-h-screen bg-overlay p-4">
+    <h1 class="text-4xl font-bold mb-4">Bienvenue sur ÉCLIPSE ONLINE™</h1>
+    <p class="mb-6 max-w-2xl text-center">Éclipse Online™ est une expérience MMORPG de nouvelle génération, immersive et multiverselle...</p>
+    <div class="bg-gray-800 bg-opacity-80 p-6 rounded-lg max-w-xl w-full text-left">
+      <h2 class="text-2xl font-semibold text-center mb-4">Pourquoi Éclipse Online est le MMORPG le plus complet du marché ?</h2>
+      <ul class="list-disc ml-6 space-y-2 text-sm">
+        <li>✅ Plus de 20 mondes explorables : science, magie, guerre, mémoire…</li>
+        <li>✅ Compatible PC, mobile, console et cloud</li>
+        <li>✅ Races jouables, classes évolutives, métiers, politique, artisanat</li>
+        <li>✅ IA adaptative + événements dynamiques</li>
+        <li>✅ Plus léger que les AAA (26 Go VS 125 Go pour Destiny 2)</li>
+      </ul>
+      <div class="mt-4 flex flex-col items-center">
+        <a href="Comparatif_Eclipse_Online.pdf" class="text-blue-300 underline">📄 Voir le PDF marketing</a>
+      </div>
+      <div class="mt-4 flex justify-center space-x-4 text-sm">
+        <a href="#" class="text-gray-400 hover:text-pink-400">📷 Instagram</a>
+        <a href="#" class="text-gray-400 hover:text-blue-500">📘 Facebook</a>
+        <a href="#" class="text-gray-400 hover:text-black">🎵 TikTok</a>
+        <a href="#" class="text-gray-400 hover:text-red-500">▶️ YouTube</a>
+      </div>
+      <div class="mt-4 text-center">
+        🌐 Langue :
+        <select onchange="location.href=this.value" class="text-black px-2 py-1 rounded">
+          <option value="index_fr.html">Français</option>
+          <option value="index_en.html">English</option>
+        </select>
+      </div>
     </div>
-    <div class="lang">
-      🌐 Langue :
-      <select onchange="location = this.value;">
-        <option value="index_fr.html" selected>Français</option>
-<option value="index_en.html" >English</option>
-<option value="index_es.html" >Español</option>
-<option value="index_de.html" >Deutsch</option>
-<option value="index_pt.html" >Português</option>
-<option value="index_ja.html" >日本語</option>
-<option value="index_zh.html" >中文</option>
-<option value="index_ko.html" >한국어</option>
-<option value="index_ar.html" >العربية</option>
-      </select>
-    </div>
-    <footer>© BlackNova Industries inc. — Tous droits réservés</footer>
+    <footer class="mt-6 text-xs text-gray-400 flex items-center gap-2">
+      <img src="logo_blacknova.png" alt="BlackNova Logo" style="height: 16px;">
+      © BlackNova Industries inc. — Tous droits réservés
+    </footer>
   </div>
 </body>
 </html>
