@@ -1,50 +1,54 @@
-
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <title>ÉCLIPSE ONLINE™ - Home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ÉCLIPSE ONLINE™</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      background: url('background.png') no-repeat center center fixed;
+    body {
+      background: url('background.jpg') no-repeat center center fixed;
       background-size: cover;
       font-family: Arial, sans-serif;
-      color: white;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
     }
-    .content-box {
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 30px;
-      border-radius: 12px;
-      max-width: 800px;
-    }
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 0.5em;
-    }
-    h2 {
-      font-size: 1.2rem;
-      margin-bottom: 1.5em;
-    }
-    p {
-      font-size: 1rem;
-      line-height: 1.6;
+    .bg-overlay {
+      background-color: rgba(0, 0, 0, 0.7);
     }
   </style>
 </head>
-<body>
-  <div class="content-box">
-    <h1>Bienvenue sur ÉCLIPSE ONLINE™</h1>
-        <p>Éclipse Online™ est une expérience MMORPG de nouvelle génération, immersive et multiverselle, couvrant plusieurs mondes. Des combats PVP/PVE intenses à la résolution d’énigmes, en passant par le commerce interdimensionnel et les mondes adultes, Éclipse Online rassemble exploration, stratégie et communauté dans un univers sans limites.</p>
+<body class="text-white">
+  <div class="flex flex-col items-center justify-center min-h-screen bg-overlay p-4">
+    <h1 class="text-4xl font-bold mb-4">Welcome to <span class="text-purple-400">ÉCLIPSE ONLINE™</span></h1>
+    <p class="mb-6 max-w-2xl text-center">Éclipse Online™ is a next-gen MMORPG experience covering multiple universes. From intense PVP/PVE combat to solving puzzles and managing interdimensional trade, it blends exploration, strategy, and community in a limitless universe.</p>
+
+    <div class="bg-gray-800 bg-opacity-80 p-6 rounded-lg max-w-xl w-full text-left">
+      <h2 class="text-2xl font-semibold text-center mb-4">Why is Eclipse Online the most complete MMORPG on the market?</h2>
+      <ul class="list-disc ml-6 space-y-2 text-sm">
+        <li>✅ 20+ explorable worlds: science, magic, war, memory...</li>
+        <li>✅ PC, mobile, console and cloud compatible</li>
+        <li>✅ Playable races, evolving classes, politics, crafting</li>
+        <li>✅ Adaptive AI + dynamic events</li>
+        <li>✅ Lighter than AAA games (26 GB VS 125 GB for Destiny 2)</li>
+      </ul>
+      <div class="mt-4 flex flex-col items-center">
+        <a href="Comparatif_Eclipse_Online.pdf" class="text-blue-300 underline">📄 View the marketing PDF</a>
+      </div>
+      <div class="mt-4 flex justify-center space-x-4 text-sm">
+        <a href="#" class="text-gray-400 hover:text-pink-400">📷 Instagram</a>
+        <a href="#" class="text-gray-400 hover:text-blue-500">📘 Facebook</a>
+        <a href="#" class="text-gray-400 hover:text-black">🎵 TikTok</a>
+        <a href="#" class="text-gray-400 hover:text-red-500">▶️ YouTube</a>
+      </div>
+      <div class="mt-4 text-center">
+        🌐 Language:
+        <select onchange="location.href=this.value" class="text-black px-2 py-1 rounded">
+          <option value="index_en.html">English</option>
+          <option value="index.html">Français</option>
+        </select>
+      </div>
+    </div>
+
+    <footer class="mt-6 text-xs text-gray-400">© BlackNova Industries inc. — All rights reserved</footer>
   </div>
 </body>
 </html>

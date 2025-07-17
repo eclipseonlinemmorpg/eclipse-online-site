@@ -1,58 +1,54 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Préchargement - ÉCLIPSE ONLINE</title>
-    <style>
-        html, body {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            overflow: hidden;
-            font-family: Arial, sans-serif;
-        }
-
-        body {
-            background: url('logo_blacknova.png') no-repeat center center fixed;
-            background-size: cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-align: center;
-        }
-
-        .preloader-text {
-            background-color: rgba(0, 0, 0, 0.6);
-            padding: 30px;
-            border-radius: 12px;
-        }
-
-        h1 {
-            margin: 0 0 10px 0;
-            font-size: 26px;
-        }
-
-        p {
-            margin: 0;
-            font-size: 16px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <title>ÉCLIPSE ONLINE™ - Accueil</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+    }
+    .bg-overlay {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+  </style>
 </head>
-<body>
-    <div class="preloader-text">
-        <h1>Bienvenue sur ÉCLIPSE ONLINE™</h1>
-        <p>Création de BlackNova Industries inc.</p>
+<body class="text-white">
+  <div class="flex flex-col items-center justify-center min-h-screen bg-overlay p-4">
+    <h1 class="text-4xl font-bold mb-4">Bienvenue sur <span class="text-purple-400">ÉCLIPSE ONLINE™</span></h1>
+    <p class="mb-6 max-w-2xl text-center">Éclipse Online™ est une expérience MMORPG de nouvelle génération, immersive et multiverselle, couvrant plusieurs mondes. Des combats PVP/PVE intenses à la résolution d’énigmes, en passant par le commerce interdimensionnel et les mondes adultes, Éclipse Online rassemble exploration, stratégie et communauté dans un univers sans limites.</p>
+
+    <div class="bg-gray-800 bg-opacity-80 p-6 rounded-lg max-w-xl w-full text-left">
+      <h2 class="text-2xl font-semibold text-center mb-4">Pourquoi Éclipse Online est le MMORPG le plus complet du marché ?</h2>
+      <ul class="list-disc ml-6 space-y-2 text-sm">
+        <li>✅ Plus de 20 mondes explorables : science, magie, guerre, mémoire…</li>
+        <li>✅ Compatible PC, mobile, console et cloud</li>
+        <li>✅ Races jouables, classes évolutives, métiers, politique, artisanat</li>
+        <li>✅ IA adaptative + événements dynamiques</li>
+        <li>✅ Plus léger que les AAA (26 Go VS 125 Go pour Destiny 2)</li>
+      </ul>
+      <div class="mt-4 flex flex-col items-center">
+        <a href="Comparatif_Eclipse_Online.pdf" class="text-blue-300 underline">📄 Voir le PDF marketing</a>
+      </div>
+      <div class="mt-4 flex justify-center space-x-4 text-sm">
+        <a href="#" class="text-gray-400 hover:text-pink-400">📷 Instagram</a>
+        <a href="#" class="text-gray-400 hover:text-blue-500">📘 Facebook</a>
+        <a href="#" class="text-gray-400 hover:text-black">🎵 TikTok</a>
+        <a href="#" class="text-gray-400 hover:text-red-500">▶️ YouTube</a>
+      </div>
+      <div class="mt-4 text-center">
+        🌐 Langue :
+        <select onchange="location.href=this.value" class="text-black px-2 py-1 rounded">
+          <option value="index.html">Français</option>
+          <option value="index_en.html">English</option>
+        </select>
+      </div>
     </div>
+
+    <footer class="mt-6 text-xs text-gray-400">© BlackNova Industries inc. — Tous droits réservés</footer>
+  </div>
 </body>
 </html>
-
-<script>
-  setTimeout(() => {
-    const lang = navigator.language || navigator.userLanguage;
-    const langCode = lang.substring(0, 2).toLowerCase();
-    const supported = ['fr', 'en', 'es', 'de', 'pt', 'ru', 'zh', 'ar', 'hi'];
-    const target = supported.includes(langCode) ? `index_${langCode}.html` : 'index_en.html';
-    window.location.href = target;
-  }, 4000); // délai après pré-loader
-</script>
