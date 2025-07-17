@@ -1,58 +1,37 @@
+
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Préchargement - ÉCLIPSE ONLINE</title>
-    <style>
-        html, body {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            overflow: hidden;
-            font-family: Arial, sans-serif;
-        }
-
-        body {
-            background: url('logo_blacknova.png') no-repeat center center fixed;
-            background-size: cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-align: center;
-        }
-
-        .preloader-text {
-            background-color: rgba(0, 0, 0, 0.6);
-            padding: 30px;
-            border-radius: 12px;
-        }
-
-        h1 {
-            margin: 0 0 10px 0;
-            font-size: 26px;
-        }
-
-        p {
-            margin: 0;
-            font-size: 16px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Loading...</title>
+  <script>
+    setTimeout(() => {
+      const lang = (navigator.language || navigator.userLanguage || "en").slice(0,2).toLowerCase();
+      const supported = ['fr','en','es','de','pt','ru','zh','ja','ko','ar'];
+      const target = supported.includes(lang) ? `${lang}.html` : 'en.html';
+      window.location.href = target;
+    }, 2000);
+  </script>
+  <style>
+    body {{
+      background: url('background.png') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }}
+    .text {{
+      background: rgba(0,0,0,0.6);
+      padding: 20px;
+      border-radius: 10px;
+      font-size: 1.5rem;
+    }}
+  </style>
 </head>
 <body>
-    <div class="preloader-text">
-        <h1>Bienvenue sur ÉCLIPSE ONLINE™</h1>
-        <p>Création de BlackNova Industries inc.</p>
-    </div>
+  <div class="text">Bienvenue sur ÉCLIPSE ONLINE™</div>
 </body>
 </html>
-
-<script>
-  setTimeout(() => {
-    const lang = navigator.language || navigator.userLanguage;
-    const langCode = lang.substring(0, 2).toLowerCase();
-    const supported = ['fr', 'en', 'es', 'de', 'pt', 'ru', 'zh', 'ar', 'hi'];
-    const target = supported.includes(langCode) ? `index_${langCode}.html` : 'index_en.html';
-    window.location.href = target;
-  }, 4000); // délai après pré-loader
-</script>

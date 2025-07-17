@@ -1,71 +1,65 @@
+
 <!DOCTYPE html>
 <html lang="pt">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Português – Éclipse Online</title>
-  
-<style>
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background: url('background.png') no-repeat center center fixed;
-    background-size: cover;
-    color: white;
-    text-align: center;
-  }
-  .container {
-    padding: 100px 20px 40px;
-  }
-  .hero {
-    background-color: rgba(0, 0, 0, 0.7);
-    display: inline-block;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 600px;
-    margin-bottom: 30px;
-  }
-  .lang-select, .links {
-    margin-top: 20px;
-  }
-  select, a {
-    margin: 0 10px;
-    color: #a0d8ff;
-    text-decoration: none;
-  }
-  .copyright {
-    margin-top: 40px;
-    font-size: 13px;
-    color: #bbb;
-  }
-</style>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Comparatif Marketing</title>
+  <style>
+    body {
+      background: url('background.png') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: white;
+      text-align: center;
+    }
+    .overlay {
+      background-color: rgba(0,0,0,0.7);
+      padding: 30px;
+      margin: 50px;
+      border-radius: 12px;
+    }
+    .lang-select {
+      margin-top: 10px;
+    }
+    a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
-  <div class="container">
+  <div class="overlay">
     <h1>Comparatif Marketing</h1>
-    <div class="hero">
-      <p>Plus complet, plus intelligent, et plus léger que tous les autres.<br>Entrez dans un univers sans limite.</p>
-    </div>
-
     <div class="lang-select">
-      🌐 Choisir la langue :
+      🌐 Langue :
       <select onchange="location = this.value;">
-        <option value="fr.html">Français</option><option value="en.html">English</option><option value="es.html">Español</option><option value="de.html">Deutsch</option><option value="pt.html">Português</option><option value="zh.html">中文</option><option value="ar.html">العربية</option><option value="ja.html">日本語</option><option value="ko.html">한국어</option>
+        <option value="fr.html" >Français</option>
+        <option value="en.html" >English</option>
+        <option value="es.html" >Español</option>
+        <option value="de.html" >Deutsch</option>
+        <option value="pt.html" selected>Português</option>
+        <option value="ru.html" >Русский</option>
+        <option value="zh.html" >中文</option>
+        <option value="ja.html" >日本語</option>
+        <option value="ko.html" >한국어</option>
+        <option value="ar.html" >العربية</option>
       </select>
     </div>
-
-    <div class="links">
-      🔗 Partager :
-      <a href="https://www.instagram.com" target="_blank">Instagram</a>
-      <a href="https://www.facebook.com/sharer/sharer.php?u=https://eclipseonline.io" target="_blank">Facebook</a>
-      <a href="https://www.tiktok.com/@BlackNovaIndustries" target="_blank">TikTok</a>
-    </div>
-
-    <div class="copyright">
-      © BlackNova Industries inc.
-    </div>
+    <p>Mais completo, mais inteligente e mais leve que todos os outros. Entre em um universo sem limites.</p>
+    <p>
+      <a href="Comparatif_Eclipse_Online.pdf" target="_blank">📄 Voir le comparatif complet en PDF</a>
+    </p>
+    <p>
+      <a href="https://instagram.com" target="_blank">Instagram</a> |
+      <a href="https://youtube.com" target="_blank">YouTube</a> |
+      <a href="https://tiktok.com" target="_blank">TikTok</a> |
+      <a href="https://facebook.com" target="_blank">Facebook</a>
+    </p>
+    <p>© BlackNova Industries inc.</p>
   </div>
 </body>
 </html>
