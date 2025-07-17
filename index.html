@@ -1,58 +1,62 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Préchargement - ÉCLIPSE ONLINE</title>
-    <style>
-        html, body {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            overflow: hidden;
-            font-family: Arial, sans-serif;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Préchargement – ÉCLIPSE ONLINE™</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #000;
+      color: white;
+    }
 
-        body {
-            background: url('logo_blacknova.png') no-repeat center center fixed;
-            background-size: cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-align: center;
-        }
+    body {
+      background: url('logo_blacknova.png') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
 
-        .preloader-text {
-            background-color: rgba(0, 0, 0, 0.6);
-            padding: 30px;
-            border-radius: 12px;
-        }
+    .preloader-text {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+      max-width: 90%;
+    }
 
-        h1 {
-            margin: 0 0 10px 0;
-            font-size: 26px;
-        }
+    h1 {
+      margin: 0 0 10px 0;
+      font-size: 1.8rem;
+    }
 
-        p {
-            margin: 0;
-            font-size: 16px;
-        }
-    </style>
+    p {
+      margin: 0;
+      font-size: 1rem;
+    }
+  </style>
 </head>
 <body>
-    <div class="preloader-text">
-        <h1>Bienvenue sur ÉCLIPSE ONLINE™</h1>
-        <p>Création de BlackNova Industries inc.</p>
-    </div>
+  <div class="preloader-text">
+    <h1>Bienvenue sur <strong>ÉCLIPSE ONLINE™</strong></h1>
+    <p>Une création de <strong>BlackNova Industries inc.</strong></p>
+  </div>
 
-    <script>
-      setTimeout(() => {
-        const lang = navigator.language || navigator.userLanguage;
-        const langCode = lang.substring(0, 2).toLowerCase();
-        const supported = ['fr', 'en', 'es', 'de', 'pt', 'ru', 'zh', 'ar', 'hi'];
-        const target = supported.includes(langCode) ? `index_${langCode}.html` : 'index_en.html';
-        window.location.href = target;
-      }, 2000);
-    </script>
+  <script>
+    setTimeout(() => {
+      const lang = (navigator.language || navigator.userLanguage || 'en').slice(0, 2).toLowerCase();
+      const supported = ['fr', 'en', 'es', 'de', 'pt', 'ru', 'zh', 'ar', 'hi', 'ja', 'ko'];
+      const fallback = 'index_en.html';
+      const destination = supported.includes(lang) ? `index_${lang}.html` : fallback;
+      window.location.href = destination;
+    }, 2000);
+  </script>
 </body>
 </html>
