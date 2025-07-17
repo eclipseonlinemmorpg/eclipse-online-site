@@ -1,62 +1,36 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Préchargement – ÉCLIPSE ONLINE™</title>
+  <title>ÉCLIPSE ONLINE™ – Site Marketing</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      overflow: hidden;
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background: #000;
-      color: white;
-    }
-
     body {
-      background: url('logo_blacknova.png') no-repeat center center fixed;
+      background: url('background.png') no-repeat center center fixed;
       background-size: cover;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
-
-    .preloader-text {
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 2rem;
-      border-radius: 1rem;
-      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
-      max-width: 90%;
-    }
-
-    h1 {
-      margin: 0 0 10px 0;
-      font-size: 1.8rem;
-    }
-
-    p {
-      margin: 0;
-      font-size: 1rem;
+      color: white;
     }
   </style>
 </head>
-<body>
-  <div class="preloader-text">
-    <h1>Bienvenue sur <strong>ÉCLIPSE ONLINE™</strong></h1>
-    <p>Une création de <strong>BlackNova Industries inc.</strong></p>
+<body class="min-h-screen flex flex-col items-center justify-center text-center px-4">
+  <h1 class="text-4xl font-bold mb-6 drop-shadow-lg">Comparatif Marketing – ÉCLIPSE ONLINE™</h1>
+  <div class="bg-purple-600 bg-opacity-80 p-6 rounded-xl max-w-3xl shadow-lg">
+    <p class="text-xl font-semibold">
+      Éclipse Online™ : Plus complet, plus intelligent, et plus léger que tous les autres. Entrez dans un univers sans limite.
+    </p>
   </div>
 
-  <script>
-    setTimeout(() => {
-      const lang = (navigator.language || navigator.userLanguage || 'en').slice(0, 2).toLowerCase();
-      const supported = ['fr', 'en', 'es', 'de', 'pt', 'ru', 'zh', 'ar', 'hi', 'ja', 'ko'];
-      const fallback = 'en.html'; // car tu as "en.html" (pas "index_en.html")
-      const destination = supported.includes(lang) ? `${lang}.html` : fallback;
-      window.location.href = destination;
-    }, 2000);
-  </script>
+  <div class="mt-6 space-y-4">
+    <a href="Comparatif_Eclipse_Online.pdf" target="_blank" class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded">
+      📄 Voir le comparatif complet en PDF
+    </a>
+    <div class="space-x-3">
+      <a href="https://twitter.com/intent/tweet?text=Découvre+le+jeu+le+plus+complet+du+marché+:+Éclipse+Online™!&url=https://eclipseonline.io" class="text-blue-400 underline" target="_blank">Partager sur X</a>
+      <a href="#" class="text-blue-300 underline" target="_blank">Partager sur TikTok</a>
+    </div>
+  </div>
+  <p class="mt-10 text-sm text-gray-300">© BlackNova Industries inc.</p>
 </body>
 </html>
