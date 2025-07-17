@@ -1,65 +1,58 @@
 <!DOCTYPE html>
-<html lang="index">
+<html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Comparatif Marketing</title>
-  
-<style>
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-image: url('background.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    color: white;
-  }
-  .container {
-    text-align: center;
-    padding: 100px 20px;
-  }
-  .language-select, .links, .pdf-button {
-    margin: 20px 0;
-  }
-  .hero {
-    background-color: rgba(120, 40, 250, 0.8);
-    padding: 20px;
-    border-radius: 10px;
-    display: inline-block;
-    margin-bottom: 30px;
-  }
-  .pdf-button a, .links a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: #fff;
-  }
-</style>
+    <meta charset="UTF-8">
+    <title>Préchargement - ÉCLIPSE ONLINE</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
 
+        body {
+            background: url('logo_blacknova.png') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .preloader-text {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        h1 {
+            margin: 0 0 10px 0;
+            font-size: 26px;
+        }
+
+        p {
+            margin: 0;
+            font-size: 16px;
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Comparatif Marketing</h1>
-    <div class="language-select">
-      🌐 Langue :
-      <select onchange="location = this.value;">
-        <option value="index.html">INDEX</option><option value="fr.html">FR</option><option value="en.html">EN</option><option value="es.html">ES</option><option value="de.html">DE</option><option value="pt.html">PT</option><option value="ar.html">AR</option><option value="zh.html">ZH</option><option value="ja.html">JA</option><option value="ko.html">KO</option>
-      </select>
+    <div class="preloader-text">
+        <h1>Bienvenue sur ÉCLIPSE ONLINE™</h1>
+        <p>Création de BlackNova Industries inc.</p>
     </div>
-    <div class="hero">
-      <p>Plus complet, plus intelligent, et plus léger que tous les autres. Entrez dans un univers sans limite.</p>
-    </div>
-    <div class="pdf-button">
-      <a href="eclipse_comparatif.pdf"><button>📄 Voir le comparatif complet en PDF</button></a>
-    </div>
-    <div class="links">
-      <a href="https://www.instagram.com" target="_blank">Instagram</a>
-      <a href="https://www.youtube.com" target="_blank">YouTube</a>
-      <a href="https://www.tiktok.com" target="_blank">TikTok</a>
-      <a href="https://www.facebook.com" target="_blank">Facebook</a>
-    </div>
-    <p>© BlackNova Industries inc.</p>
-  </div>
 </body>
 </html>
+
+<script>
+  setTimeout(() => {
+    const lang = navigator.language || navigator.userLanguage;
+    const langCode = lang.substring(0, 2).toLowerCase();
+    const supported = ['fr', 'en', 'es', 'de', 'pt', 'ru', 'zh', 'ar', 'hi'];
+    const target = supported.includes(langCode) ? `index_${langCode}.html` : 'index_en.html';
+    window.location.href = target;
+  }, 4000); // délai après pré-loader
+</script>
